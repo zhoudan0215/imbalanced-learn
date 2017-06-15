@@ -1,0 +1,548 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">23%</span>
+        </h1>
+
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        
+        <span class="key">b</span>
+        <span class="key">p</span>
+        
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+
+<div id="index">
+    <table class="index">
+        <thead>
+            
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                
+                <th class="shortkey_b">branches</th>
+                <th class="shortkey_p">partial</th>
+                
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>1921</td>
+                <td>1395</td>
+                <td>8</td>
+                
+                <td>688</td>
+                <td>10</td>
+                
+                <td class="right" data-ratio="598 2609">23%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_py.html">imblearn.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_base_py.html">imblearn/base.py</a></td>
+                <td>71</td>
+                <td>46</td>
+                <td>0</td>
+                
+                <td>20</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="25 91">27%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_combine_py.html">imblearn/combine.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_combine_smote_enn_py.html">imblearn/combine/smote_enn.py</a></td>
+                <td>64</td>
+                <td>53</td>
+                <td>0</td>
+                
+                <td>28</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="11 92">12%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_combine_smote_tomek_py.html">imblearn/combine/smote_tomek.py</a></td>
+                <td>55</td>
+                <td>44</td>
+                <td>0</td>
+                
+                <td>22</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="11 77">14%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_datasets_py.html">imblearn/datasets.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_datasets_imbalance_py.html">imblearn/datasets/imbalance.py</a></td>
+                <td>31</td>
+                <td>25</td>
+                <td>0</td>
+                
+                <td>12</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 43">14%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_datasets_zenodo_py.html">imblearn/datasets/zenodo.py</a></td>
+                <td>65</td>
+                <td>39</td>
+                <td>0</td>
+                
+                <td>22</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="28 87">32%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_ensemble_py.html">imblearn/ensemble.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_ensemble_balance_cascade_py.html">imblearn/ensemble/balance_cascade.py</a></td>
+                <td>102</td>
+                <td>86</td>
+                <td>1</td>
+                
+                <td>34</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="16 136">12%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_ensemble_easy_ensemble_py.html">imblearn/ensemble/easy_ensemble.py</a></td>
+                <td>33</td>
+                <td>24</td>
+                <td>0</td>
+                
+                <td>8</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="9 41">22%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_exceptions_py.html">imblearn/exceptions.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_metrics_py.html">imblearn/metrics.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_metrics_classification_py.html">imblearn/metrics/classification.py</a></td>
+                <td>184</td>
+                <td>163</td>
+                <td>0</td>
+                
+                <td>76</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="21 260">8%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_over_sampling_py.html">imblearn/over_sampling.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_over_sampling_adasyn_py.html">imblearn/over_sampling/adasyn.py</a></td>
+                <td>42</td>
+                <td>31</td>
+                <td>0</td>
+                
+                <td>10</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="11 52">21%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_over_sampling_base_py.html">imblearn/over_sampling/base.py</a></td>
+                <td>12</td>
+                <td>6</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 12">50%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_over_sampling_random_over_sampler_py.html">imblearn/over_sampling/random_over_sampler.py</a></td>
+                <td>20</td>
+                <td>11</td>
+                <td>0</td>
+                
+                <td>2</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="9 22">41%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_over_sampling_smote_py.html">imblearn/over_sampling/smote.py</a></td>
+                <td>130</td>
+                <td>112</td>
+                <td>1</td>
+                
+                <td>40</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="18 170">11%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_pipeline_py.html">imblearn/pipeline.py</a></td>
+                <td>182</td>
+                <td>150</td>
+                <td>0</td>
+                
+                <td>104</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="32 286">11%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_py.html">imblearn/under_sampling.py</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="12 12">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_base_py.html">imblearn/under_sampling/base.py</a></td>
+                <td>12</td>
+                <td>6</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 12">50%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_generation_py.html">imblearn/under_sampling/prototype_generation.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_generation_cluster_centroids_py.html">imblearn/under_sampling/prototype_generation/cluster_centroids.py</a></td>
+                <td>36</td>
+                <td>25</td>
+                <td>0</td>
+                
+                <td>8</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="11 44">25%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_selection_py.html">imblearn/under_sampling/prototype_selection.py</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="11 11">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_selection_condensed_nearest_neighbour_py.html">imblearn/under_sampling/prototype_selection/condensed_nearest_neighbour.py</a></td>
+                <td>72</td>
+                <td>60</td>
+                <td>0</td>
+                
+                <td>24</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="12 96">12%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_selection_edited_nearest_neighbours_py.html">imblearn/under_sampling/prototype_selection/edited_nearest_neighbours.py</a></td>
+                <td>144</td>
+                <td>122</td>
+                <td>3</td>
+                
+                <td>48</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="22 192">11%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_selection_instance_hardness_threshold_py.html">imblearn/under_sampling/prototype_selection/instance_hardness_threshold.py</a></td>
+                <td>83</td>
+                <td>67</td>
+                <td>1</td>
+                
+                <td>32</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="16 115">14%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_selection_nearmiss_py.html">imblearn/under_sampling/prototype_selection/nearmiss.py</a></td>
+                <td>84</td>
+                <td>71</td>
+                <td>1</td>
+                
+                <td>30</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="13 114">11%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_selection_neighbourhood_cleaning_rule_py.html">imblearn/under_sampling/prototype_selection/neighbourhood_cleaning_rule.py</a></td>
+                <td>56</td>
+                <td>43</td>
+                <td>1</td>
+                
+                <td>12</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="13 68">19%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_selection_one_sided_selection_py.html">imblearn/under_sampling/prototype_selection/one_sided_selection.py</a></td>
+                <td>68</td>
+                <td>55</td>
+                <td>0</td>
+                
+                <td>20</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="13 88">15%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_selection_random_under_sampler_py.html">imblearn/under_sampling/prototype_selection/random_under_sampler.py</a></td>
+                <td>30</td>
+                <td>21</td>
+                <td>0</td>
+                
+                <td>10</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="9 40">22%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_under_sampling_prototype_selection_tomek_links_py.html">imblearn/under_sampling/prototype_selection/tomek_links.py</a></td>
+                <td>31</td>
+                <td>21</td>
+                <td>0</td>
+                
+                <td>12</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="10 43">23%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_utils_py.html">imblearn/utils.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_utils_estimator_checks_py.html">imblearn/utils/estimator_checks.py</a></td>
+                <td>132</td>
+                <td>108</td>
+                <td>0</td>
+                
+                <td>34</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="24 166">14%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_utils_validation_py.html">imblearn/utils/validation.py</a></td>
+                <td>107</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>74</td>
+                <td>8</td>
+                
+                <td class="right" data-ratio="173 181">96%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="imblearn_version_py.html">imblearn/version.py</a></td>
+                <td>21</td>
+                <td>6</td>
+                <td>0</td>
+                
+                <td>6</td>
+                <td>2</td>
+                
+                <td class="right" data-ratio="19 27">70%</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.3.4</a>,
+            created at 2017-05-14 11:50
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

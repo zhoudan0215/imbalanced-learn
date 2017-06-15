@@ -1,0 +1,22 @@
+
+
+Examples using ``imblearn.ensemble.EasyEnsemble``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the easy ensemble method.">
+
+.. only:: html
+
+    .. figure:: /auto_examples/ensemble/images/thumb/sphx_glr_plot_easy_ensemble_thumb.png
+
+        :ref:`sphx_glr_auto_examples_ensemble_plot_easy_ensemble.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_ensemble_plot_easy_ensemble.py`

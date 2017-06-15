@@ -1,0 +1,40 @@
+
+
+Examples using ``imblearn.over_sampling.ADASYN``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this face recognition example two faces are used from the LFW (Faces in the Wild) dataset. S...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/applications/images/thumb/sphx_glr_plot_over_sampling_benchmark_lfw_thumb.png
+
+        :ref:`sphx_glr_auto_examples_applications_plot_over_sampling_benchmark_lfw.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_applications_plot_over_sampling_benchmark_lfw.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the Adaptive Synthetic Sampling Approach for Imbalanced Learning ADASYN meth...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/over-sampling/images/thumb/sphx_glr_plot_adasyn_thumb.png
+
+        :ref:`sphx_glr_auto_examples_over-sampling_plot_adasyn.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_over-sampling_plot_adasyn.py`

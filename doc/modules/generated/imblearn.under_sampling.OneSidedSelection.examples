@@ -1,0 +1,22 @@
+
+
+Examples using ``imblearn.under_sampling.OneSidedSelection``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the one-sided selection method.">
+
+.. only:: html
+
+    .. figure:: /auto_examples/under-sampling/images/thumb/sphx_glr_plot_one_sided_selection_thumb.png
+
+        :ref:`sphx_glr_auto_examples_under-sampling_plot_one_sided_selection.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_under-sampling_plot_one_sided_selection.py`

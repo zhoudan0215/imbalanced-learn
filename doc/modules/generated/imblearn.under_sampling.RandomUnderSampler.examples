@@ -1,0 +1,22 @@
+
+
+Examples using ``imblearn.under_sampling.RandomUnderSampler``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the random under-sampling method.">
+
+.. only:: html
+
+    .. figure:: /auto_examples/under-sampling/images/thumb/sphx_glr_plot_random_under_sampler_thumb.png
+
+        :ref:`sphx_glr_auto_examples_under-sampling_plot_random_under_sampler.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_under-sampling_plot_random_under_sampler.py`
