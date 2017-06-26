@@ -204,7 +204,7 @@
 <h1>imblearn.metrics.geometric_mean_score<a class="headerlink" href="#imblearn-metrics-geometric-mean-score" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="imblearn.metrics.geometric_mean_score">
-<code class="descclassname">imblearn.metrics.</code><code class="descname">geometric_mean_score</code><span class="sig-paren">(</span><em>y_true</em>, <em>y_pred</em>, <em>labels=None</em>, <em>pos_label=1</em>, <em>average='multiclass'</em>, <em>sample_weight=None</em>, <em>correction=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/metrics/classification.html#geometric_mean_score"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/metrics/classification.py#L463"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.metrics.geometric_mean_score" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">imblearn.metrics.</code><code class="descname">geometric_mean_score</code><span class="sig-paren">(</span><em>y_true</em>, <em>y_pred</em>, <em>labels=None</em>, <em>pos_label=1</em>, <em>average=’multiclass’</em>, <em>sample_weight=None</em>, <em>correction=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/metrics/classification.html#geometric_mean_score"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/metrics/classification.py#L463"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.metrics.geometric_mean_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the geometric mean</p>
 <p>The geometric mean (G-mean) is the root of the product of class-wise
 sensitivity. This measure tries to maximize the accuracy on each of the
@@ -218,7 +218,7 @@ calculated for each class separately on a one-vs-rest basis when
 <p>The best value is 1 and the worst value is 0. Traditionally if at least one
 class is unrecognized by the classifier, G-mean resolves to zero. To
 alleviate this property, for highly multi-class the sensitivity of
-unrecognized classes can be &#8220;corrected&#8221; to be a user specified value
+unrecognized classes can be “corrected” to be a user specified value
 (instead of zero). This option works only if <code class="docutils literal"><span class="pre">average</span> <span class="pre">==</span> <span class="pre">'multiclass'</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -247,7 +247,7 @@ If the data are multiclass, this will be ignored;
 setting <code class="docutils literal"><span class="pre">labels=[pos_label]</span></code> and <code class="docutils literal"><span class="pre">average</span> <span class="pre">!=</span> <span class="pre">'binary'</span></code> will report
 scores for that label only.</p>
 </div></blockquote>
-<p><strong>average</strong> : str or None, optional (default=``&#8217;multiclass&#8217;<a href="#id1"><span class="problematic" id="id2">``</span></a>)</p>
+<p><strong>average</strong> : str or None, optional (default=“’multiclass’<a href="#id1"><span class="problematic" id="id2">``</span></a>)</p>
 <blockquote>
 <div><p>If <code class="docutils literal"><span class="pre">None</span></code>, the scores for each class are returned. Otherwise, this
 determines the type of averaging performed on the data:</p>
@@ -267,7 +267,7 @@ mean.  This does not take label imbalance into account.</p>
 <dt><code class="docutils literal"><span class="pre">'weighted'</span></code>:</dt>
 <dd><p class="first last">Calculate metrics for each label, and find their average, weighted
 by support (the number of true instances for each label). This
-alters &#8216;macro&#8217; to account for label imbalance; it can result in an
+alters ‘macro’ to account for label imbalance; it can result in an
 F-score that is not between precision and recall.</p>
 </dd>
 <dt><code class="docutils literal"><span class="pre">'samples'</span></code>:</dt>
@@ -294,18 +294,18 @@ value.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r27" rules="none">
+<table class="docutils citation" frame="void" id="r5354" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[R27]</a></td><td>Kubat, M. and Matwin, S. &#8220;Addressing the curse of
-imbalanced training sets: one-sided selection&#8221; ICML (1997)</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id3">[R5354]</a></td><td>Kubat, M. and Matwin, S. “Addressing the curse of
+imbalanced training sets: one-sided selection” ICML (1997)</td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="r28" rules="none">
+<table class="docutils citation" frame="void" id="r5454" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[R28]</a></td><td>Barandela, R., Sánchez, J. S., Garcıa, V., &amp; Rangel, E. &#8220;Strategies
-for learning in class imbalance problems&#8221;, Pattern Recognition,
+<tr><td class="label"><a class="fn-backref" href="#id4">[R5454]</a></td><td>Barandela, R., Sánchez, J. S., Garcıa, V., &amp; Rangel, E. “Strategies
+for learning in class imbalance problems”, Pattern Recognition,
 36(3), (2003), pp 849-851.</td></tr>
 </tbody>
 </table>

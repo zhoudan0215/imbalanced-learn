@@ -9,17 +9,6 @@ imblearn\.under\_sampling\.RepeatedEditedNearestNeighbours
    .. automethod:: __init__
 
    
-   .. rubric:: Methods
-
-   .. autosummary::
-   
-      ~RepeatedEditedNearestNeighbours.__init__
-      ~RepeatedEditedNearestNeighbours.fit
-      ~RepeatedEditedNearestNeighbours.fit_sample
-      ~RepeatedEditedNearestNeighbours.get_params
-      ~RepeatedEditedNearestNeighbours.sample
-      ~RepeatedEditedNearestNeighbours.set_params
-   
    
 
    

@@ -9,17 +9,6 @@ imblearn\.under\_sampling\.CondensedNearestNeighbour
    .. automethod:: __init__
 
    
-   .. rubric:: Methods
-
-   .. autosummary::
-   
-      ~CondensedNearestNeighbour.__init__
-      ~CondensedNearestNeighbour.fit
-      ~CondensedNearestNeighbour.fit_sample
-      ~CondensedNearestNeighbour.get_params
-      ~CondensedNearestNeighbour.sample
-      ~CondensedNearestNeighbour.set_params
-   
    
 
    

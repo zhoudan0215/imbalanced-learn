@@ -201,7 +201,7 @@
 <h1>imblearn.over_sampling.ADASYN<a class="headerlink" href="#imblearn-over-sampling-adasyn" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="imblearn.over_sampling.ADASYN">
-<em class="property">class </em><code class="descclassname">imblearn.over_sampling.</code><code class="descname">ADASYN</code><span class="sig-paren">(</span><em>ratio='auto'</em>, <em>random_state=None</em>, <em>k=None</em>, <em>n_neighbors=5</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/over_sampling/adasyn.html#ADASYN"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/over_sampling/adasyn.py#L17"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">imblearn.over_sampling.</code><code class="descname">ADASYN</code><span class="sig-paren">(</span><em>ratio=’auto’</em>, <em>random_state=None</em>, <em>k=None</em>, <em>n_neighbors=5</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/over_sampling/adasyn.html#ADASYN"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/over_sampling/adasyn.py#L17"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform over-sampling using ADASYN.</p>
 <p>Perform over-sampling using Adaptive Synthetic Sampling Approach for
 Imbalanced Learning.</p>
@@ -209,7 +209,7 @@ Imbalanced Learning.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ratio</strong> : str, dict, or callable, optional (default=&#8217;auto&#8217;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ratio</strong> : str, dict, or callable, optional (default=’auto’)</p>
 <blockquote>
 <div><p>Ratio to use for resampling the data set.</p>
 <ul class="simple">
@@ -260,13 +260,13 @@ find the k_neighbors.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>Supports mutli-class resampling.</p>
-<p>The implementation is based on <a class="reference internal" href="#r30" id="id1">[R30]</a>.</p>
+<p>The implementation is based on <a class="reference internal" href="#r5959" id="id1">[R5959]</a>.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r30" rules="none">
+<table class="docutils citation" frame="void" id="r5959" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R30]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> He, Haibo, Yang Bai, Edwardo A. Garcia, and Shutao Li. &#8220;ADASYN:
-Adaptive synthetic sampling approach for imbalanced learning,&#8221; In IEEE
+<tr><td class="label">[R5959]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> He, Haibo, Yang Bai, Edwardo A. Garcia, and Shutao Li. “ADASYN:
+Adaptive synthetic sampling approach for imbalanced learning,” In IEEE
 International Joint Conference on Neural Networks (IEEE World Congress
 on Computational Intelligence), pp. 1322-1328, 2008.</td></tr>
 </tbody>
@@ -313,39 +313,12 @@ on Computational Intelligence), pp. 1322-1328, 2008.</td></tr>
 </table>
 <dl class="method">
 <dt id="imblearn.over_sampling.ADASYN.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>ratio='auto'</em>, <em>random_state=None</em>, <em>k=None</em>, <em>n_neighbors=5</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/over_sampling/adasyn.html#ADASYN.__init__"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/over_sampling/adasyn.py#L97"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ratio=’auto’</em>, <em>random_state=None</em>, <em>k=None</em>, <em>n_neighbors=5</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/over_sampling/adasyn.html#ADASYN.__init__"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/over_sampling/adasyn.py#L97"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#imblearn.over_sampling.ADASYN.__init__" title="imblearn.over_sampling.ADASYN.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([ratio,&nbsp;random_state,&nbsp;k,&nbsp;...])</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#imblearn.over_sampling.ADASYN.fit" title="imblearn.over_sampling.ADASYN.fit"><code class="xref py py-obj docutils literal"><span class="pre">fit</span></code></a>(X,&nbsp;y)</td>
-<td>Find the classes statistics before to perform sampling.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#imblearn.over_sampling.ADASYN.fit_sample" title="imblearn.over_sampling.ADASYN.fit_sample"><code class="xref py py-obj docutils literal"><span class="pre">fit_sample</span></code></a>(X,&nbsp;y)</td>
-<td>Fit the statistics and resample the data directly.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#imblearn.over_sampling.ADASYN.get_params" title="imblearn.over_sampling.ADASYN.get_params"><code class="xref py py-obj docutils literal"><span class="pre">get_params</span></code></a>([deep])</td>
-<td>Get parameters for this estimator.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#imblearn.over_sampling.ADASYN.sample" title="imblearn.over_sampling.ADASYN.sample"><code class="xref py py-obj docutils literal"><span class="pre">sample</span></code></a>(X,&nbsp;y)</td>
-<td>Resample the dataset.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#imblearn.over_sampling.ADASYN.set_params" title="imblearn.over_sampling.ADASYN.set_params"><code class="xref py py-obj docutils literal"><span class="pre">set_params</span></code></a>(**params)</td>
-<td>Set the parameters of this estimator.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="imblearn.over_sampling.ADASYN.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/base.py#L136"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/base.py#L136"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find the classes statistics before to perform sampling.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -373,7 +346,7 @@ on Computational Intelligence), pp. 1322-1328, 2008.</td></tr>
 
 <dl class="method">
 <dt id="imblearn.over_sampling.ADASYN.fit_sample">
-<code class="descname">fit_sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/base.py#L65"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.fit_sample" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit_sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/base.py#L65"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.fit_sample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit the statistics and resample the data directly.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -405,7 +378,7 @@ on Computational Intelligence), pp. 1322-1328, 2008.</td></tr>
 
 <dl class="method">
 <dt id="imblearn.over_sampling.ADASYN.get_params">
-<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/../../virtualenvs/venv-system/local/lib/python2.7/site-packages/sklearn/base.py#L220"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/../../virtualenvs/venv-system/local/lib/python2.7/site-packages/sklearn/base.py#L220"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -430,7 +403,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="imblearn.over_sampling.ADASYN.sample">
-<code class="descname">sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/base.py#L36"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.sample" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/base.py#L36"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.sample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resample the dataset.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -462,11 +435,11 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="imblearn.over_sampling.ADASYN.set_params">
-<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/../../virtualenvs/venv-system/local/lib/python2.7/site-packages/sklearn/base.py#L257"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/../../virtualenvs/venv-system/local/lib/python2.7/site-packages/sklearn/base.py#L257"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.ADASYN.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The latter have parameters of the form
-<code class="docutils literal"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it&#8217;s possible to update each
+<code class="docutils literal"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
 component of a nested object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

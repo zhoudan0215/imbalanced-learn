@@ -201,7 +201,7 @@
 <h1>imblearn.over_sampling.SMOTE<a class="headerlink" href="#imblearn-over-sampling-smote" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="imblearn.over_sampling.SMOTE">
-<em class="property">class </em><code class="descclassname">imblearn.over_sampling.</code><code class="descname">SMOTE</code><span class="sig-paren">(</span><em>ratio='auto'</em>, <em>random_state=None</em>, <em>k=None</em>, <em>k_neighbors=5</em>, <em>m=None</em>, <em>m_neighbors=10</em>, <em>out_step=0.5</em>, <em>kind='regular'</em>, <em>svm_estimator=None</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/over_sampling/smote.html#SMOTE"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/over_sampling/smote.py#L23"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">imblearn.over_sampling.</code><code class="descname">SMOTE</code><span class="sig-paren">(</span><em>ratio=’auto’</em>, <em>random_state=None</em>, <em>k=None</em>, <em>k_neighbors=5</em>, <em>m=None</em>, <em>m_neighbors=10</em>, <em>out_step=0.5</em>, <em>kind=’regular’</em>, <em>svm_estimator=None</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/over_sampling/smote.html#SMOTE"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/over_sampling/smote.py#L23"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class to perform over-sampling using SMOTE.</p>
 <p>This object is an implementation of SMOTE - Synthetic Minority
 Over-sampling Technique, and the variants Borderline SMOTE 1, 2 and
@@ -210,7 +210,7 @@ SVM-SMOTE.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ratio</strong> : str, dict, or callable, optional (default=&#8217;auto&#8217;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ratio</strong> : str, dict, or callable, optional (default=’auto’)</p>
 <blockquote>
 <div><p>Ratio to use for resampling the data set.</p>
 <ul class="simple">
@@ -273,7 +273,7 @@ to find the k_neighbors.</p>
 <blockquote>
 <div><p>Step size when extrapolating. Used with <code class="docutils literal"><span class="pre">kind='svm'</span></code>.</p>
 </div></blockquote>
-<p><strong>kind</strong> : str, optional (default=&#8217;regular&#8217;)</p>
+<p><strong>kind</strong> : str, optional (default=’regular’)</p>
 <blockquote>
 <div><p>The type of SMOTE algorithm to use one of the following options:
 <code class="docutils literal"><span class="pre">'regular'</span></code>, <code class="docutils literal"><span class="pre">'borderline1'</span></code>, <code class="docutils literal"><span class="pre">'borderline2'</span></code>, <code class="docutils literal"><span class="pre">'svm'</span></code>.</p>
@@ -292,30 +292,30 @@ classifier can be passed.</p>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>See the original papers: <a class="reference internal" href="#r31" id="id1">[R31]</a>, <a class="reference internal" href="#r32" id="id2">[R32]</a>, <a class="reference internal" href="#r33" id="id3">[R33]</a> for more details.</p>
+<p>See the original papers: <a class="reference internal" href="#r6163" id="id1">[R6163]</a>, <a class="reference internal" href="#r6263" id="id2">[R6263]</a>, <a class="reference internal" href="#r6363" id="id3">[R6363]</a> for more details.</p>
 <p>Supports mutli-class resampling.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r31" rules="none">
+<table class="docutils citation" frame="void" id="r6163" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R31]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> N. V. Chawla, K. W. Bowyer, L. O.Hall, W. P. Kegelmeyer, &#8220;SMOTE:
-synthetic minority over-sampling technique,&#8221; Journal of artificial
+<tr><td class="label">[R6163]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> N. V. Chawla, K. W. Bowyer, L. O.Hall, W. P. Kegelmeyer, “SMOTE:
+synthetic minority over-sampling technique,” Journal of artificial
 intelligence research, 321-357, 2002.</td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="r32" rules="none">
+<table class="docutils citation" frame="void" id="r6263" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R32]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id5">2</a>)</em> H. Han, W. Wen-Yuan, M. Bing-Huan, &#8220;Borderline-SMOTE: a new
-over-sampling method in imbalanced data sets learning,&#8221; Advances in
+<tr><td class="label">[R6263]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id5">2</a>)</em> H. Han, W. Wen-Yuan, M. Bing-Huan, “Borderline-SMOTE: a new
+over-sampling method in imbalanced data sets learning,” Advances in
 intelligent computing, 878-887, 2005.</td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="r33" rules="none">
+<table class="docutils citation" frame="void" id="r6363" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R33]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id6">2</a>)</em> H. M. Nguyen, E. W. Cooper, K. Kamei, &#8220;Borderline over-sampling for
-imbalanced data classification,&#8221; International Journal of Knowledge
+<tr><td class="label">[R6363]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id6">2</a>)</em> H. M. Nguyen, E. W. Cooper, K. Kamei, “Borderline over-sampling for
+imbalanced data classification,” International Journal of Knowledge
 Engineering and Soft Data Paradigms, 3(1), pp.4-21, 2001.</td></tr>
 </tbody>
 </table>
@@ -360,39 +360,12 @@ Engineering and Soft Data Paradigms, 3(1), pp.4-21, 2001.</td></tr>
 </table>
 <dl class="method">
 <dt id="imblearn.over_sampling.SMOTE.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>ratio='auto'</em>, <em>random_state=None</em>, <em>k=None</em>, <em>k_neighbors=5</em>, <em>m=None</em>, <em>m_neighbors=10</em>, <em>out_step=0.5</em>, <em>kind='regular'</em>, <em>svm_estimator=None</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/over_sampling/smote.html#SMOTE.__init__"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/over_sampling/smote.py#L137"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ratio=’auto’</em>, <em>random_state=None</em>, <em>k=None</em>, <em>k_neighbors=5</em>, <em>m=None</em>, <em>m_neighbors=10</em>, <em>out_step=0.5</em>, <em>kind=’regular’</em>, <em>svm_estimator=None</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/over_sampling/smote.html#SMOTE.__init__"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/over_sampling/smote.py#L137"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#imblearn.over_sampling.SMOTE.__init__" title="imblearn.over_sampling.SMOTE.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([ratio,&nbsp;random_state,&nbsp;k,&nbsp;...])</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#imblearn.over_sampling.SMOTE.fit" title="imblearn.over_sampling.SMOTE.fit"><code class="xref py py-obj docutils literal"><span class="pre">fit</span></code></a>(X,&nbsp;y)</td>
-<td>Find the classes statistics before to perform sampling.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#imblearn.over_sampling.SMOTE.fit_sample" title="imblearn.over_sampling.SMOTE.fit_sample"><code class="xref py py-obj docutils literal"><span class="pre">fit_sample</span></code></a>(X,&nbsp;y)</td>
-<td>Fit the statistics and resample the data directly.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#imblearn.over_sampling.SMOTE.get_params" title="imblearn.over_sampling.SMOTE.get_params"><code class="xref py py-obj docutils literal"><span class="pre">get_params</span></code></a>([deep])</td>
-<td>Get parameters for this estimator.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#imblearn.over_sampling.SMOTE.sample" title="imblearn.over_sampling.SMOTE.sample"><code class="xref py py-obj docutils literal"><span class="pre">sample</span></code></a>(X,&nbsp;y)</td>
-<td>Resample the dataset.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#imblearn.over_sampling.SMOTE.set_params" title="imblearn.over_sampling.SMOTE.set_params"><code class="xref py py-obj docutils literal"><span class="pre">set_params</span></code></a>(**params)</td>
-<td>Set the parameters of this estimator.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="imblearn.over_sampling.SMOTE.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/base.py#L136"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/base.py#L136"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find the classes statistics before to perform sampling.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -420,7 +393,7 @@ Engineering and Soft Data Paradigms, 3(1), pp.4-21, 2001.</td></tr>
 
 <dl class="method">
 <dt id="imblearn.over_sampling.SMOTE.fit_sample">
-<code class="descname">fit_sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/base.py#L65"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.fit_sample" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit_sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/base.py#L65"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.fit_sample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit the statistics and resample the data directly.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -452,7 +425,7 @@ Engineering and Soft Data Paradigms, 3(1), pp.4-21, 2001.</td></tr>
 
 <dl class="method">
 <dt id="imblearn.over_sampling.SMOTE.get_params">
-<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/../../virtualenvs/venv-system/local/lib/python2.7/site-packages/sklearn/base.py#L220"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/../../virtualenvs/venv-system/local/lib/python2.7/site-packages/sklearn/base.py#L220"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -477,7 +450,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="imblearn.over_sampling.SMOTE.sample">
-<code class="descname">sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/base.py#L36"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.sample" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/base.py#L36"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.sample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resample the dataset.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -509,11 +482,11 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="imblearn.over_sampling.SMOTE.set_params">
-<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e7ccf10/imblearn/../../virtualenvs/venv-system/local/lib/python2.7/site-packages/sklearn/base.py#L257"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f4753f2/imblearn/../../virtualenvs/venv-system/local/lib/python2.7/site-packages/sklearn/base.py#L257"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.over_sampling.SMOTE.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The latter have parameters of the form
-<code class="docutils literal"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it&#8217;s possible to update each
+<code class="docutils literal"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
 component of a nested object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
