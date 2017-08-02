@@ -31,4 +31,13 @@ imblearn\.pipeline\.Pipeline
 
    
    
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Pipeline.classes_
+      ~Pipeline.inverse_transform
+      ~Pipeline.named_steps
+      ~Pipeline.transform
+   
    

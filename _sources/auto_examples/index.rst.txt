@@ -541,7 +541,7 @@ The implemented methods can be categorized into 2 groups: (i) fixed under-sampli
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the nearmiss 1 & 2 & 3 method.">
+    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the nearmiss 1 &amp; 2 &amp; 3 method.">
 
 .. only:: html
 
