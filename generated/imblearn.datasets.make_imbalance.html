@@ -200,7 +200,7 @@
 <h1>imblearn.datasets.make_imbalance<a class="headerlink" href="#imblearn-datasets-make-imbalance" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="imblearn.datasets.make_imbalance">
-<code class="descclassname">imblearn.datasets.</code><code class="descname">make_imbalance</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>ratio</em>, <em>min_c_=None</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/datasets/imbalance.html#make_imbalance"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/f695fb7/imblearn/datasets/imbalance.py#L18"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.datasets.make_imbalance" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">imblearn.datasets.</code><code class="descname">make_imbalance</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>ratio</em>, <em>min_c_=None</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/datasets/imbalance.html#make_imbalance"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/1e3fdfe/imblearn/datasets/imbalance.py#L22"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.datasets.make_imbalance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Turns a dataset into an imbalanced dataset at specific ratio.
 A simple toy dataset to visualize clustering and classification
 algorithms.</p>
@@ -216,16 +216,26 @@ algorithms.</p>
 <blockquote>
 <div><p>Corresponding label for each sample in X.</p>
 </div></blockquote>
-<p><strong>ratio</strong> : float,</p>
+<p><strong>ratio</strong> : str, dict, or callable, optional (default=&#8217;auto&#8217;)</p>
 <blockquote>
-<div><p>The desired ratio given by the number of samples in
-the minority class over the the number of samples in
-the majority class. Thus the ratio should be in the interval [0., 1.]</p>
+<div><p>Ratio to use for resampling the data set.</p>
+<ul class="simple">
+<li>If <code class="docutils literal"><span class="pre">dict</span></code>, the keys correspond to the targeted classes. The values
+correspond to the desired number of samples.</li>
+<li>If callable, function taking <code class="docutils literal"><span class="pre">y</span></code> and returns a <code class="docutils literal"><span class="pre">dict</span></code>. The keys
+correspond to the targeted classes. The values correspond to the
+desired number of samples.</li>
+</ul>
 </div></blockquote>
 <p><strong>min_c_</strong> : str or int, optional (default=None)</p>
 <blockquote>
 <div><p>The identifier of the class to be the minority class.
-If None, <a href="#id1"><span class="problematic" id="id2">min_c_</span></a> is set to be the current minority class.</p>
+If <code class="docutils literal"><span class="pre">None</span></code>, <code class="docutils literal"><span class="pre">min_c_</span></code> is set to be the current minority class.
+Only used when <code class="docutils literal"><span class="pre">ratio</span></code> is a float for back-compatibility.</p>
+<div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.2: </span><code class="docutils literal"><span class="pre">min_c_</span></code> is deprecated in 0.2 and will be removed in 0.4. Use
+<code class="docutils literal"><span class="pre">ratio</span></code> by passing a <code class="docutils literal"><span class="pre">dict</span></code> instead.</p>
+</div>
 </div></blockquote>
 <p><strong>random_state</strong> : int, RandomState instance or None, optional (default=None)</p>
 <blockquote>
@@ -248,6 +258,22 @@ by np.random.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_iris</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.datasets</span> <span class="k">import</span> <span class="n">make_imbalance</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">target</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distribution before imbalancing: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
+<span class="go">Distribution before imbalancing: Counter({0: 50, 1: 50, 2: 50})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X_res</span><span class="p">,</span> <span class="n">y_res</span> <span class="o">=</span> <span class="n">make_imbalance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span>
+<span class="gp">... </span>                              <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distribution after imbalancing: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">y_res</span><span class="p">)))</span>
+<span class="go">Distribution after imbalancing: Counter({2: 30, 1: 20, 0: 10})</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

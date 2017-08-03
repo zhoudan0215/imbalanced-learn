@@ -371,6 +371,11 @@
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">set_diff_ratio_target</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The </span><span class="si">{}</span><span class="s2"> target class is/are not present in the&quot;</span>
                          <span class="s2">&quot; data.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">set_diff_ratio_target</span><span class="p">))</span>
+    <span class="c1"># check that there is no negative number</span>
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">n_samples</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">n_samples</span> <span class="ow">in</span> <span class="n">ratio</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The number of samples in a class cannot be negative.&quot;</span>
+                         <span class="s2">&quot;&#39;ratio&#39; contains some negative value: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                             <span class="n">ratio</span><span class="p">))</span>
     <span class="n">ratio_</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">if</span> <span class="n">sampling_type</span> <span class="o">==</span> <span class="s1">&#39;over-sampling&#39;</span><span class="p">:</span>
         <span class="n">n_samples_majority</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">target_stats</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>

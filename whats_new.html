@@ -216,9 +216,11 @@
 <div class="section" id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li>Fixed a bug in <code class="xref py py-func docutils literal"><span class="pre">utils.check_ratio</span></code> such that an error is raised when
+the number of samples required is negative. By <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</li>
 <li>Fixed a bug in <code class="xref py py-class docutils literal"><span class="pre">under_sampling.NearMiss</span></code> version 3. The
 indices returned were wrong. By <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</li>
-<li>fixed bug for <code class="xref py py-class docutils literal"><span class="pre">ensemble.BalanceCascade</span></code> and <code class="xref py py-class docutils literal"><span class="pre">combine.SMOTEENN</span></code>
+<li>Fixed bug for <code class="xref py py-class docutils literal"><span class="pre">ensemble.BalanceCascade</span></code> and <code class="xref py py-class docutils literal"><span class="pre">combine.SMOTEENN</span></code>
 and <a href="#id1"><span class="problematic" id="id2">:class:`SMOTETomek. By `Guillaume Lemaitre`_</span></a>.`</li>
 </ul>
 <div class="section" id="new-features">
@@ -233,6 +235,8 @@ imbalanced datasets useful for benchmarking. By <a class="reference external" hr
 <div class="section" id="enhancement">
 <h3>Enhancement<a class="headerlink" href="#enhancement" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li><code class="xref py py-func docutils literal"><span class="pre">datasets.make_imbalance</span></code> take a ratio similarly to other samplers. It
+supports multiclass. By <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</li>
 <li>All the unit tests have been factorized and a <cite>check_estimators</cite> has
 been derived from scikit-learn. By <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</li>
 <li>Script for automatic build of conda packages and uploading. By
@@ -261,6 +265,10 @@ recurrent patterns. By <a class="reference external" href="https://github.com/gl
 <div class="section" id="deprecation">
 <h3>Deprecation<a class="headerlink" href="#deprecation" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li>Deprecation of the use of <code class="docutils literal"><span class="pre">min_c_</span></code> in <code class="xref py py-func docutils literal"><span class="pre">datasets.make_imbalance</span></code>. By
+<a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a></li>
+<li>Deprecation of the use of float in <code class="xref py py-func docutils literal"><span class="pre">datasets.make_imbalance</span></code> for the
+ratio parameter. By <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</li>
 <li>deprecate the use of float as ratio in favor of dictionary, string, or
 callable. By <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</li>
 </ul>
