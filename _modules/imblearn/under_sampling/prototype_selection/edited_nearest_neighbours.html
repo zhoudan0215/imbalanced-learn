@@ -265,7 +265,8 @@
 <span class="sd">    -----</span>
 <span class="sd">    The method is based on [1]_.</span>
 
-<span class="sd">    Supports mutli-class resampling.</span>
+<span class="sd">    Supports mutli-class resampling. A one-vs.-rest scheme is used when</span>
+<span class="sd">    sampling a class as proposed in [1]_.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
@@ -453,7 +454,8 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">    The method is based on [1]_.</span>
+<span class="sd">    The method is based on [1]_. A one-vs.-rest scheme is used when</span>
+<span class="sd">    sampling a class as proposed in [1]_.</span>
 
 <span class="sd">    Supports mutli-class resampling.</span>
 
@@ -656,6 +658,12 @@
 <span class="sd">        - If ``&#39;mode&#39;``, the majority vote of the neighbours will be used in</span>
 <span class="sd">          order to exclude a sample.</span>
 
+<span class="sd">    allow_minority : bool, optional (default=False)</span>
+<span class="sd">        If ``True``, it allows the majority classes to become the minority</span>
+<span class="sd">        class without early stopping.</span>
+
+<span class="sd">        .. versionadded:: 0.3</span>
+
 <span class="sd">    n_jobs : int, optional (default=-1)</span>
 <span class="sd">        The number of thread to open when it is possible.</span>
 
@@ -663,7 +671,8 @@
 <span class="sd">    -----</span>
 <span class="sd">    The method is based on [1]_.</span>
 
-<span class="sd">    Supports mutli-class resampling.</span>
+<span class="sd">    Supports mutli-class resampling. A one-vs.-rest scheme is used when</span>
+<span class="sd">    sampling a class as proposed in [1]_.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
@@ -697,12 +706,14 @@
                  <span class="n">size_ngh</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
                  <span class="n">kind_sel</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span>
+                 <span class="n">allow_minority</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                  <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AllKNN</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ratio</span><span class="o">=</span><span class="n">ratio</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">return_indices</span> <span class="o">=</span> <span class="n">return_indices</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">size_ngh</span> <span class="o">=</span> <span class="n">size_ngh</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">n_neighbors</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">kind_sel</span> <span class="o">=</span> <span class="n">kind_sel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allow_minority</span> <span class="o">=</span> <span class="n">allow_minority</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">n_jobs</span></div>
 
     <span class="k">def</span> <span class="nf">_validate_estimator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -773,6 +784,9 @@
             <span class="p">])</span>
             <span class="n">b_min_bec_maj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">count_non_min</span> <span class="o">&lt;</span>
                                    <span class="n">target_stats</span><span class="p">[</span><span class="n">class_minority</span><span class="p">])</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">allow_minority</span><span class="p">:</span>
+                <span class="c1"># overwrite b_min_bec_maj</span>
+                <span class="n">b_min_bec_maj</span> <span class="o">=</span> <span class="kc">False</span>
 
             <span class="c1"># Case 2</span>
             <span class="n">b_remove_maj_class</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stats_enn</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">target_stats</span><span class="p">))</span>
