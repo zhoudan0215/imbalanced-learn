@@ -1,0 +1,16 @@
+imblearn\.ensemble\.BalanceCascade
+==================================
+
+.. currentmodule:: imblearn.ensemble
+
+.. autoclass:: BalanceCascade
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   

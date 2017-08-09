@@ -1,0 +1,16 @@
+imblearn\.over\_sampling\.SMOTE
+===============================
+
+.. currentmodule:: imblearn.over_sampling
+
+.. autoclass:: SMOTE
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   

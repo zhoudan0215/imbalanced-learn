@@ -1,0 +1,16 @@
+imblearn\.over\_sampling\.ADASYN
+================================
+
+.. currentmodule:: imblearn.over_sampling
+
+.. autoclass:: ADASYN
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   

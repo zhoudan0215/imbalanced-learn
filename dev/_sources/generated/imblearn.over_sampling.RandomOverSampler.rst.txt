@@ -1,0 +1,16 @@
+imblearn\.over\_sampling\.RandomOverSampler
+===========================================
+
+.. currentmodule:: imblearn.over_sampling
+
+.. autoclass:: RandomOverSampler
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   

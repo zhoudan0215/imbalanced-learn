@@ -1,0 +1,16 @@
+imblearn\.combine\.SMOTEENN
+===========================
+
+.. currentmodule:: imblearn.combine
+
+.. autoclass:: SMOTEENN
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   

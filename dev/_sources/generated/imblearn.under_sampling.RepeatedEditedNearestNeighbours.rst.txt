@@ -1,0 +1,16 @@
+imblearn\.under\_sampling\.RepeatedEditedNearestNeighbours
+==========================================================
+
+.. currentmodule:: imblearn.under_sampling
+
+.. autoclass:: RepeatedEditedNearestNeighbours
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   

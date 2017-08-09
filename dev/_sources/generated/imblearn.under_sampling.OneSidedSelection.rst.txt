@@ -1,0 +1,16 @@
+imblearn\.under\_sampling\.OneSidedSelection
+============================================
+
+.. currentmodule:: imblearn.under_sampling
+
+.. autoclass:: OneSidedSelection
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   

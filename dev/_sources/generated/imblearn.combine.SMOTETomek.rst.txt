@@ -1,0 +1,16 @@
+imblearn\.combine\.SMOTETomek
+=============================
+
+.. currentmodule:: imblearn.combine
+
+.. autoclass:: SMOTETomek
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   

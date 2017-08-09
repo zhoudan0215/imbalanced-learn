@@ -1,0 +1,16 @@
+imblearn\.pipeline\.Pipeline
+============================
+
+.. currentmodule:: imblearn.pipeline
+
+.. autoclass:: Pipeline
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   

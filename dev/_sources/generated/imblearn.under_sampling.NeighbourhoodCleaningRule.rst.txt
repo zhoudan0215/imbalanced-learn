@@ -1,0 +1,16 @@
+imblearn\.under\_sampling\.NeighbourhoodCleaningRule
+====================================================
+
+.. currentmodule:: imblearn.under_sampling
+
+.. autoclass:: NeighbourhoodCleaningRule
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   
