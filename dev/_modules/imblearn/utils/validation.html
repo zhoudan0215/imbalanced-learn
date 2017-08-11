@@ -438,7 +438,7 @@
     <span class="k">return</span> <span class="n">ratio</span>
 
 
-<div class="viewcode-block" id="check_ratio"><a class="viewcode-back" href="../../../generated/imblearn.utils.check_ratio.html#imblearn.utils.check_ratio">[docs]</a><span class="k">def</span> <span class="nf">check_ratio</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sampling_type</span><span class="p">):</span>
+<div class="viewcode-block" id="check_ratio"><a class="viewcode-back" href="../../../generated/imblearn.utils.check_ratio.html#imblearn.utils.check_ratio">[docs]</a><span class="k">def</span> <span class="nf">check_ratio</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sampling_type</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Ratio validation for samplers.</span>
 
 <span class="sd">    Checks ratio for consistent type and return a dictionary</span>
@@ -470,6 +470,9 @@
 <span class="sd">    sampling_type : str,</span>
 <span class="sd">        The type of sampling. Can be either ``&#39;over-sampling&#39;`` or</span>
 <span class="sd">        ``&#39;under-sampling&#39;``.</span>
+
+<span class="sd">    kwargs : dict, optional</span>
+<span class="sd">        Dictionary of additional keyword arguments to pass to ``ratio``.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -504,7 +507,7 @@
                              <span class="s2">&quot; (0, 1]. Got </span><span class="si">{}</span><span class="s2"> instead.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ratio</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">_ratio_float</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sampling_type</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">callable</span><span class="p">(</span><span class="n">ratio</span><span class="p">):</span>
-        <span class="n">ratio_</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">ratio_</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">_ratio_dict</span><span class="p">(</span><span class="n">ratio_</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sampling_type</span><span class="p">)</span></div>
 
 
