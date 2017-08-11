@@ -200,7 +200,7 @@
 <h1>imblearn.datasets.make_imbalance<a class="headerlink" href="#imblearn-datasets-make-imbalance" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="imblearn.datasets.make_imbalance">
-<code class="descclassname">imblearn.datasets.</code><code class="descname">make_imbalance</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>ratio</em>, <em>min_c_=None</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/datasets/imbalance.html#make_imbalance"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/85bc6fc/imblearn/datasets/imbalance.py#L22"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.datasets.make_imbalance" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">imblearn.datasets.</code><code class="descname">make_imbalance</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>ratio</em>, <em>min_c_=None</em>, <em>random_state=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/datasets/imbalance.html#make_imbalance"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/738481f/imblearn/datasets/imbalance.py#L22"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.datasets.make_imbalance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Turns a dataset into an imbalanced dataset at specific ratio.
 A simple toy dataset to visualize clustering and classification
 algorithms.</p>
@@ -243,6 +243,10 @@ Only used when <code class="docutils literal"><span class="pre">ratio</span></co
 If RandomState instance, random_state is the random number generator;
 If None, the random number generator is the RandomState instance used
 by np.random.</p>
+</div></blockquote>
+<p><strong>kwargs</strong> : dict, optional</p>
+<blockquote>
+<div><p>Dictionary of additional keyword arguments to pass to <code class="docutils literal"><span class="pre">ratio</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>

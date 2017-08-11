@@ -200,7 +200,7 @@
 <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="make_imbalance"><a class="viewcode-back" href="../../../generated/imblearn.datasets.make_imbalance.html#imblearn.datasets.make_imbalance">[docs]</a><span class="k">def</span> <span class="nf">make_imbalance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ratio</span><span class="p">,</span> <span class="n">min_c_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="make_imbalance"><a class="viewcode-back" href="../../../generated/imblearn.datasets.make_imbalance.html#imblearn.datasets.make_imbalance">[docs]</a><span class="k">def</span> <span class="nf">make_imbalance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ratio</span><span class="p">,</span> <span class="n">min_c_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Turns a dataset into an imbalanced dataset at specific ratio.</span>
 <span class="sd">    A simple toy dataset to visualize clustering and classification</span>
 <span class="sd">    algorithms.</span>
@@ -237,6 +237,9 @@
 <span class="sd">        If None, the random number generator is the RandomState instance used</span>
 <span class="sd">        by np.random.</span>
 
+<span class="sd">    kwargs : dict, optional</span>
+<span class="sd">        Dictionary of additional keyword arguments to pass to ``ratio``.</span>
+
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    X_resampled : ndarray, shape (n_samples_new, n_features)</span>
@@ -265,7 +268,7 @@
     <span class="n">target_stats</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="c1"># restrict ratio to be a dict or a callable</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">or</span> <span class="n">callable</span><span class="p">(</span><span class="n">ratio</span><span class="p">):</span>
-        <span class="n">ratio_</span> <span class="o">=</span> <span class="n">check_ratio</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;under-sampling&#39;</span><span class="p">)</span>
+        <span class="n">ratio_</span> <span class="o">=</span> <span class="n">check_ratio</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;under-sampling&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="c1"># FIXME: deprecated in 0.2 to be removed in 0.4</span>
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="n">Real</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">min_c_</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
