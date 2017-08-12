@@ -1,5 +1,5 @@
-imblearn\.under\_sampling\.InstanceHardnessThreshold
-====================================================
+:mod:`imblearn.under_sampling`.InstanceHardnessThreshold
+===============================================================
 
 .. currentmodule:: imblearn.under_sampling
 
@@ -7,10 +7,10 @@ imblearn\.under\_sampling\.InstanceHardnessThreshold
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.under_sampling.InstanceHardnessThreshold.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

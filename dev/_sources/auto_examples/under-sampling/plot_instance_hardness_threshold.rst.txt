@@ -68,8 +68,11 @@ An illustration of the instance hardness threshold method.
     f, axs = plt.subplots(2, 2)
 
     axs = [a for ax in axs for a in ax]
-    for ax, ratio in zip(axs, [0.0, 0.4, 0.7, 1.0]):
-        if ratio == 0.0:
+    for ax, ratio in zip(axs, (0,
+                               {1: 25, 0: 10},
+                               {1: 14, 0: 10},
+                               {1: 10, 0: 10})):
+        if ratio == 0:
             c0, c1 = plot_resampling(ax, X_vis, y, 'Original set')
         else:
             iht = InstanceHardnessThreshold(ratio=ratio,
@@ -91,7 +94,7 @@ An illustration of the instance hardness threshold method.
     plt.tight_layout(pad=3)
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.581 seconds)
+**Total running time of the script:** ( 0 minutes  0.547 seconds)
 
 
 

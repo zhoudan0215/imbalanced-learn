@@ -1,5 +1,5 @@
-imblearn\.ensemble\.BalanceCascade
-==================================
+:mod:`imblearn.ensemble`.BalanceCascade
+==============================================
 
 .. currentmodule:: imblearn.ensemble
 
@@ -7,10 +7,10 @@ imblearn\.ensemble\.BalanceCascade
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.ensemble.BalanceCascade.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

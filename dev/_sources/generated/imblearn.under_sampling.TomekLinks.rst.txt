@@ -1,5 +1,5 @@
-imblearn\.under\_sampling\.TomekLinks
-=====================================
+:mod:`imblearn.under_sampling`.TomekLinks
+================================================
 
 .. currentmodule:: imblearn.under_sampling
 
@@ -7,10 +7,10 @@ imblearn\.under\_sampling\.TomekLinks
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.under_sampling.TomekLinks.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

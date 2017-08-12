@@ -93,10 +93,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../support.html">Support</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Documentation</span></p>
 <ul>
@@ -110,10 +113,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#evaluation-examples">Evaluation examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#model-selection">Model Selection</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Addtional information</span></p>
+<p class="caption"><span class="caption-text">Addtional Information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../whats_new.html">Release history</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">To Do list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
 </ul>
 
@@ -202,6 +204,8 @@
     <span class="sd">&quot;&quot;&quot;Class to perform over-sampling using SMOTE and cleaning using ENN.</span>
 
 <span class="sd">    Combine over- and under-sampling using SMOTE and Edited Nearest Neighbours.</span>
+
+<span class="sd">    Read more in the :ref:`User Guide &lt;combine&gt;`.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -316,6 +320,20 @@
 <span class="sd">    Supports mutli-class resampling. Refer to SMOTE and ENN regarding the</span>
 <span class="sd">    scheme which used.</span>
 
+<span class="sd">    See :ref:`sphx_glr_auto_examples_combine_plot_smote_enn.py` and</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_combine_plot_comparison_combine.py`.</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    SMOTETomek : Over-sample using SMOTE followed by under-sampling removing</span>
+<span class="sd">        the Tomek&#39;s links.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] G. Batista, R. C. Prati, M. C. Monard. &quot;A study of the behavior of</span>
+<span class="sd">       several methods for balancing machine learning training data,&quot; ACM</span>
+<span class="sd">       Sigkdd Explorations Newsletter 6 (1), 20-29, 2004.</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 
@@ -331,12 +349,6 @@
 <span class="sd">    &gt;&gt;&gt; X_res, y_res = sme.fit_sample(X, y)</span>
 <span class="sd">    &gt;&gt;&gt; print(&#39;Resampled dataset shape {}&#39;.format(Counter(y_res)))</span>
 <span class="sd">    Resampled dataset shape Counter({0: 900, 1: 881})</span>
-
-<span class="sd">    References</span>
-<span class="sd">    ----------</span>
-<span class="sd">    .. [1] G. Batista, R. C. Prati, M. C. Monard. &quot;A study of the behavior of</span>
-<span class="sd">       several methods for balancing machine learning training data,&quot; ACM</span>
-<span class="sd">       Sigkdd Explorations Newsletter 6 (1), 20-29, 2004.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -541,6 +553,7 @@
       <script type="text/javascript" src="../../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
 
   
 

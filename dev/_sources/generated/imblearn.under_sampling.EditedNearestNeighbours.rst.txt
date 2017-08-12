@@ -1,5 +1,5 @@
-imblearn\.under\_sampling\.EditedNearestNeighbours
-==================================================
+:mod:`imblearn.under_sampling`.EditedNearestNeighbours
+=============================================================
 
 .. currentmodule:: imblearn.under_sampling
 
@@ -7,10 +7,10 @@ imblearn\.under\_sampling\.EditedNearestNeighbours
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.under_sampling.EditedNearestNeighbours.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

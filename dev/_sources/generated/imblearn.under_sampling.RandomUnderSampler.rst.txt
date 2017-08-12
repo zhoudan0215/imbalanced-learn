@@ -1,5 +1,5 @@
-imblearn\.under\_sampling\.RandomUnderSampler
-=============================================
+:mod:`imblearn.under_sampling`.RandomUnderSampler
+========================================================
 
 .. currentmodule:: imblearn.under_sampling
 
@@ -7,10 +7,10 @@ imblearn\.under\_sampling\.RandomUnderSampler
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.under_sampling.RandomUnderSampler.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -1,5 +1,5 @@
-imblearn\.ensemble\.EasyEnsemble
-================================
+:mod:`imblearn.ensemble`.EasyEnsemble
+============================================
 
 .. currentmodule:: imblearn.ensemble
 
@@ -7,10 +7,10 @@ imblearn\.ensemble\.EasyEnsemble
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.ensemble.EasyEnsemble.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

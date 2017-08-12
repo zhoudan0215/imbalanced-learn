@@ -93,10 +93,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../support.html">Support</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Documentation</span></p>
 <ul>
@@ -110,10 +113,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#evaluation-examples">Evaluation examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#model-selection">Model Selection</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Addtional information</span></p>
+<p class="caption"><span class="caption-text">Addtional Information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../whats_new.html">Release history</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">To Do list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
 </ul>
 
@@ -202,8 +204,11 @@
 
 <div class="viewcode-block" id="make_imbalance"><a class="viewcode-back" href="../../../generated/imblearn.datasets.make_imbalance.html#imblearn.datasets.make_imbalance">[docs]</a><span class="k">def</span> <span class="nf">make_imbalance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ratio</span><span class="p">,</span> <span class="n">min_c_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Turns a dataset into an imbalanced dataset at specific ratio.</span>
+
 <span class="sd">    A simple toy dataset to visualize clustering and classification</span>
 <span class="sd">    algorithms.</span>
+
+<span class="sd">    Read more in the :ref:`User Guide &lt;make_imbalanced&gt;`.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -217,7 +222,8 @@
 <span class="sd">        Ratio to use for resampling the data set.</span>
 
 <span class="sd">        - If ``dict``, the keys correspond to the targeted classes. The values</span>
-<span class="sd">          correspond to the desired number of samples.</span>
+<span class="sd">          correspond to the desired number of samples. All samples will be</span>
+<span class="sd">          passed through if the class is not specified.</span>
 <span class="sd">        - If callable, function taking ``y`` and returns a ``dict``. The keys</span>
 <span class="sd">          correspond to the targeted classes. The values correspond to the</span>
 <span class="sd">          desired number of samples.</span>
@@ -247,6 +253,13 @@
 
 <span class="sd">    y_resampled : ndarray, shape (n_samples_new)</span>
 <span class="sd">        The corresponding label of `X_resampled`</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    See</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_applications_plot_multi_class_under_sampling.py`,</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_datasets_plot_make_imbalance.py`, and</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_plot_ratio_usage.py`.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
@@ -348,6 +361,7 @@
       <script type="text/javascript" src="../../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
 
   
 

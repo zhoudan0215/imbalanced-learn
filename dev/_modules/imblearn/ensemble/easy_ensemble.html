@@ -93,10 +93,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../support.html">Support</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Documentation</span></p>
 <ul>
@@ -110,10 +113,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#evaluation-examples">Evaluation examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#model-selection">Model Selection</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Addtional information</span></p>
+<p class="caption"><span class="caption-text">Addtional Information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../whats_new.html">Release history</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">To Do list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
 </ul>
 
@@ -201,6 +203,8 @@
 <span class="sd">    This method iteratively select a random subset and make an ensemble of the</span>
 <span class="sd">    different sets.</span>
 
+<span class="sd">    Read more in the :ref:`User Guide &lt;ensemble&gt;`.</span>
+
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    ratio : str, dict, or callable, optional (default=&#39;auto&#39;)</span>
@@ -242,6 +246,19 @@
 
 <span class="sd">    Supports mutli-class resampling by sampling each class independently.</span>
 
+<span class="sd">    See :ref:`sphx_glr_auto_examples_ensemble_plot_easy_ensemble.py`.</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    BalanceCascade</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] X. Y. Liu, J. Wu and Z. H. Zhou, &quot;Exploratory Undersampling for</span>
+<span class="sd">       Class-Imbalance Learning,&quot; in IEEE Transactions on Systems, Man, and</span>
+<span class="sd">       Cybernetics, Part B (Cybernetics), vol. 39, no. 2, pp. 539-550,</span>
+<span class="sd">       April 2009.</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 
@@ -258,13 +275,6 @@
 <span class="sd">    &gt;&gt;&gt; X_res, y_res = ee.fit_sample(X, y)</span>
 <span class="sd">    &gt;&gt;&gt; print(&#39;Resampled dataset shape {}&#39;.format(Counter(y_res[0])))</span>
 <span class="sd">    Resampled dataset shape Counter({0: 100, 1: 100})</span>
-
-<span class="sd">    References</span>
-<span class="sd">    ----------</span>
-<span class="sd">    .. [1] X. Y. Liu, J. Wu and Z. H. Zhou, &quot;Exploratory Undersampling for</span>
-<span class="sd">       Class-Imbalance Learning,&quot; in IEEE Transactions on Systems, Man, and</span>
-<span class="sd">       Cybernetics, Part B (Cybernetics), vol. 39, no. 2, pp. 539-550,</span>
-<span class="sd">       April 2009.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -374,6 +384,7 @@
       <script type="text/javascript" src="../../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
 
   
 

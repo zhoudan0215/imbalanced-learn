@@ -93,10 +93,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../support.html">Support</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Documentation</span></p>
 <ul>
@@ -110,10 +113,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#evaluation-examples">Evaluation examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#model-selection">Model Selection</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Addtional information</span></p>
+<p class="caption"><span class="caption-text">Addtional Information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../whats_new.html">Release history</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">To Do list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
 </ul>
 
@@ -205,6 +207,8 @@
 
 <span class="sd">    Combine over- and under-sampling using SMOTE and Tomek links.</span>
 
+<span class="sd">    Read more in the :ref:`User Guide &lt;combine&gt;`.</span>
+
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    ratio : str, dict, or callable, optional (default=&#39;auto&#39;)</span>
@@ -260,7 +264,7 @@
 <span class="sd">        Step size when extrapolating.</span>
 
 <span class="sd">        .. deprecated:: 0.2</span>
-<span class="sd">           `out_step` is deprecated from 0.2 and will be replaced in 0.4</span>
+<span class="sd">           ``out_step`` is deprecated from 0.2 and will be replaced in 0.4</span>
 <span class="sd">           Give directly a :class:`imblearn.over_sampling.SMOTE` object.</span>
 
 <span class="sd">    kind_smote : str, optional (default=None)</span>
@@ -269,7 +273,7 @@
 <span class="sd">        ``&#39;svm&#39;``.</span>
 
 <span class="sd">        .. deprecated:: 0.2</span>
-<span class="sd">           ``kind_smote` is deprecated from 0.2 and will be replaced in 0.4</span>
+<span class="sd">           ``kind_smote`` is deprecated from 0.2 and will be replaced in 0.4</span>
 <span class="sd">           Give directly a :class:`imblearn.over_sampling.SMOTE` object.</span>
 
 <span class="sd">    n_jobs : int, optional (default=None)</span>
@@ -285,6 +289,19 @@
 
 <span class="sd">    Supports mutli-class resampling. Refer to SMOTE and TomekLinks regarding</span>
 <span class="sd">    the scheme which used.</span>
+
+<span class="sd">    See :ref:`sphx_glr_auto_examples_combine_plot_smote_tomek.py` and</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_combine_plot_comparison_combine.py`.</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    SMOTEENN : Over-sample using SMOTE followed by under-sampling using Edited</span>
+<span class="sd">        Nearest Neighbours.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] G. Batista, B. Bazzan, M. Monard, &quot;Balancing Training Data for</span>
+<span class="sd">       Automated Annotation of Keywords: a Case Study,&quot; In WOB, 10-18, 2003.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
@@ -302,11 +319,6 @@
 <span class="sd">    &gt;&gt;&gt; X_res, y_res = smt.fit_sample(X, y)</span>
 <span class="sd">    &gt;&gt;&gt; print(&#39;Resampled dataset shape {}&#39;.format(Counter(y_res)))</span>
 <span class="sd">    Resampled dataset shape Counter({0: 900, 1: 900})</span>
-
-<span class="sd">    References</span>
-<span class="sd">    ----------</span>
-<span class="sd">    .. [1] G. Batista, B. Bazzan, M. Monard, &quot;Balancing Training Data for</span>
-<span class="sd">       Automated Annotation of Keywords: a Case Study,&quot; In WOB, 10-18, 2003.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -492,6 +504,7 @@
       <script type="text/javascript" src="../../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
 
   
 

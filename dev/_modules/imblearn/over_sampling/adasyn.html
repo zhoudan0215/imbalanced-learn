@@ -93,10 +93,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../support.html">Support</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Documentation</span></p>
 <ul>
@@ -110,10 +113,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#evaluation-examples">Evaluation examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#model-selection">Model Selection</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Addtional information</span></p>
+<p class="caption"><span class="caption-text">Addtional Information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../whats_new.html">Release history</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">To Do list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
 </ul>
 
@@ -201,6 +203,8 @@
 <span class="sd">    Perform over-sampling using Adaptive Synthetic Sampling Approach for</span>
 <span class="sd">    Imbalanced Learning.</span>
 
+<span class="sd">    Read more in the :ref:`User Guide &lt;smote_adasyn&gt;`.</span>
+
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    ratio : str, dict, or callable, optional (default=&#39;auto&#39;)</span>
@@ -248,6 +252,22 @@
 
 <span class="sd">    Supports mutli-class resampling. A one-vs.-rest scheme is used.</span>
 
+<span class="sd">    See</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_applications_plot_over_sampling_benchmark_lfw.py`,</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_over-sampling_plot_adasyn.py` and</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_over-sampling_plot_comparison_over_sampling.py`.</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    SMOTE : Over-sample using SMOTE.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] He, Haibo, Yang Bai, Edwardo A. Garcia, and Shutao Li. &quot;ADASYN:</span>
+<span class="sd">       Adaptive synthetic sampling approach for imbalanced learning,&quot; In IEEE</span>
+<span class="sd">       International Joint Conference on Neural Networks (IEEE World Congress</span>
+<span class="sd">       on Computational Intelligence), pp. 1322-1328, 2008.</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 
@@ -265,13 +285,6 @@
 <span class="sd">    &gt;&gt;&gt; X_res, y_res = ada.fit_sample(X, y)</span>
 <span class="sd">    &gt;&gt;&gt; print(&#39;Resampled dataset shape {}&#39;.format(Counter(y_res)))</span>
 <span class="sd">    Resampled dataset shape Counter({0: 904, 1: 900})</span>
-
-<span class="sd">    References</span>
-<span class="sd">    ----------</span>
-<span class="sd">    .. [1] He, Haibo, Yang Bai, Edwardo A. Garcia, and Shutao Li. &quot;ADASYN:</span>
-<span class="sd">       Adaptive synthetic sampling approach for imbalanced learning,&quot; In IEEE</span>
-<span class="sd">       International Joint Conference on Neural Networks (IEEE World Congress</span>
-<span class="sd">       on Computational Intelligence), pp. 1322-1328, 2008.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -411,6 +424,7 @@
       <script type="text/javascript" src="../../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
 
   
 

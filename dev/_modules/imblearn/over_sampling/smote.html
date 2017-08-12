@@ -93,10 +93,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../support.html">Support</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Documentation</span></p>
 <ul>
@@ -110,10 +113,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#evaluation-examples">Evaluation examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#model-selection">Model Selection</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Addtional information</span></p>
+<p class="caption"><span class="caption-text">Addtional Information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../whats_new.html">Release history</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">To Do list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
 </ul>
 
@@ -208,6 +210,8 @@
 <span class="sd">    Over-sampling Technique, and the variants Borderline SMOTE 1, 2 and</span>
 <span class="sd">    SVM-SMOTE.</span>
 
+<span class="sd">    Read more in the :ref:`User Guide &lt;smote_adasyn&gt;`.</span>
+
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    ratio : str, dict, or callable, optional (default=&#39;auto&#39;)</span>
@@ -283,6 +287,32 @@
 <span class="sd">    Supports mutli-class resampling. A one-vs.-rest scheme is used as</span>
 <span class="sd">    originally proposed in [1]_.</span>
 
+<span class="sd">    See</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_applications_plot_over_sampling_benchmark_lfw.py`,</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_evaluation_plot_classification_report.py`,</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_evaluation_plot_metrics.py`,</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_model_selection_plot_validation_curve.py`,</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_over-sampling_plot_comparison_over_sampling.py`,</span>
+<span class="sd">    and :ref:`sphx_glr_auto_examples_over-sampling_plot_smote.py`.</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    ADASYN : Over-sample using ADASYN.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] N. V. Chawla, K. W. Bowyer, L. O.Hall, W. P. Kegelmeyer, &quot;SMOTE:</span>
+<span class="sd">       synthetic minority over-sampling technique,&quot; Journal of artificial</span>
+<span class="sd">       intelligence research, 321-357, 2002.</span>
+
+<span class="sd">    .. [2] H. Han, W. Wen-Yuan, M. Bing-Huan, &quot;Borderline-SMOTE: a new</span>
+<span class="sd">       over-sampling method in imbalanced data sets learning,&quot; Advances in</span>
+<span class="sd">       intelligent computing, 878-887, 2005.</span>
+
+<span class="sd">    .. [3] H. M. Nguyen, E. W. Cooper, K. Kamei, &quot;Borderline over-sampling for</span>
+<span class="sd">       imbalanced data classification,&quot; International Journal of Knowledge</span>
+<span class="sd">       Engineering and Soft Data Paradigms, 3(1), pp.4-21, 2001.</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 
@@ -299,20 +329,6 @@
 <span class="sd">    &gt;&gt;&gt; X_res, y_res = sm.fit_sample(X, y)</span>
 <span class="sd">    &gt;&gt;&gt; print(&#39;Resampled dataset shape {}&#39;.format(Counter(y_res)))</span>
 <span class="sd">    Resampled dataset shape Counter({0: 900, 1: 900})</span>
-
-<span class="sd">    References</span>
-<span class="sd">    ----------</span>
-<span class="sd">    .. [1] N. V. Chawla, K. W. Bowyer, L. O.Hall, W. P. Kegelmeyer, &quot;SMOTE:</span>
-<span class="sd">       synthetic minority over-sampling technique,&quot; Journal of artificial</span>
-<span class="sd">       intelligence research, 321-357, 2002.</span>
-
-<span class="sd">    .. [2] H. Han, W. Wen-Yuan, M. Bing-Huan, &quot;Borderline-SMOTE: a new</span>
-<span class="sd">       over-sampling method in imbalanced data sets learning,&quot; Advances in</span>
-<span class="sd">       intelligent computing, 878-887, 2005.</span>
-
-<span class="sd">    .. [3] H. M. Nguyen, E. W. Cooper, K. Kamei, &quot;Borderline over-sampling for</span>
-<span class="sd">       imbalanced data classification,&quot; International Journal of Knowledge</span>
-<span class="sd">       Engineering and Soft Data Paradigms, 3(1), pp.4-21, 2001.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -753,6 +769,7 @@
       <script type="text/javascript" src="../../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
 
   
 

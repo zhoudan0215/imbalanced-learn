@@ -8,6 +8,26 @@ General examples
 General-purpose and introductory examples for the `imbalanced-learn` toolbox.
 
 
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use the ``ratio`` parameter in the different examples. It illustrated...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_plot_ratio_usage_thumb.png
+
+        :ref:`sphx_glr_auto_examples_plot_ratio_usage.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/plot_ratio_usage
 .. raw:: html
 
     <div style='clear:both'></div>
@@ -40,6 +60,26 @@ Examples which use real-word dataset.
    :hidden:
 
    /auto_examples/applications/plot_multi_class_under_sampling
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to balance the text data before to train a classifier.">
+
+.. only:: html
+
+    .. figure:: /auto_examples/applications/images/thumb/sphx_glr_plot_topic_classication_thumb.png
+
+        :ref:`sphx_glr_auto_examples_applications_plot_topic_classication.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/applications/plot_topic_classication
 
 .. raw:: html
 
@@ -112,6 +152,26 @@ Combine methods mixed over- and under-sampling methods. Generally SMOTE is used 
    :hidden:
 
    /auto_examples/combine/plot_smote_tomek
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows the effect of applying an under-sampling algorithms after SMOTE over-samplin...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/combine/images/thumb/sphx_glr_plot_comparison_combine_thumb.png
+
+        :ref:`sphx_glr_auto_examples_combine_plot_comparison_combine.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/combine/plot_comparison_combine
 .. raw:: html
 
     <div style='clear:both'></div>
@@ -297,6 +357,26 @@ Data balancing can be performed by over-sampling such that new samples are gener
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrates how a new sample is generated taking into account the neighbourhood of...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/over-sampling/images/thumb/sphx_glr_plot_illustration_generation_sample_thumb.png
+
+        :ref:`sphx_glr_auto_examples_over-sampling_plot_illustration_generation_sample.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/over-sampling/plot_illustration_generation_sample
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the Adaptive Synthetic Sampling Approach for Imbalanced Learning ADASYN meth...">
 
 .. only:: html
@@ -354,6 +434,26 @@ Data balancing can be performed by over-sampling such that new samples are gener
    :hidden:
 
    /auto_examples/over-sampling/plot_smote
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The following example attends to make a qualitative comparison between the different over-sampl...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/over-sampling/images/thumb/sphx_glr_plot_comparison_over_sampling_thumb.png
+
+        :ref:`sphx_glr_auto_examples_over-sampling_plot_comparison_over_sampling.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/over-sampling/plot_comparison_over_sampling
 .. raw:: html
 
     <div style='clear:both'></div>
@@ -521,26 +621,6 @@ The implemented methods can be categorized into 2 groups: (i) fixed under-sampli
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the instance hardness threshold method.">
-
-.. only:: html
-
-    .. figure:: /auto_examples/under-sampling/images/thumb/sphx_glr_plot_instance_hardness_threshold_thumb.png
-
-        :ref:`sphx_glr_auto_examples_under-sampling_plot_instance_hardness_threshold.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/under-sampling/plot_instance_hardness_threshold
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the nearmiss 1 &amp; 2 &amp; 3 method.">
 
 .. only:: html
@@ -561,6 +641,46 @@ The implemented methods can be categorized into 2 groups: (i) fixed under-sampli
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the instance hardness threshold method.">
+
+.. only:: html
+
+    .. figure:: /auto_examples/under-sampling/images/thumb/sphx_glr_plot_instance_hardness_threshold_thumb.png
+
+        :ref:`sphx_glr_auto_examples_under-sampling_plot_instance_hardness_threshold.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/under-sampling/plot_instance_hardness_threshold
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrates what is a Tomek link.">
+
+.. only:: html
+
+    .. figure:: /auto_examples/under-sampling/images/thumb/sphx_glr_plot_illustration_tomek_links_thumb.png
+
+        :ref:`sphx_glr_auto_examples_under-sampling_plot_illustration_tomek_links.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/under-sampling/plot_illustration_tomek_links
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the ENN, RENN, and All-KNN method.">
 
 .. only:: html
@@ -578,6 +698,46 @@ The implemented methods can be categorized into 2 groups: (i) fixed under-sampli
    :hidden:
 
    /auto_examples/under-sampling/plot_enn_renn_allknn
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrates the different way of selecting example in NearMiss.">
+
+.. only:: html
+
+    .. figure:: /auto_examples/under-sampling/images/thumb/sphx_glr_plot_illustration_nearmiss_thumb.png
+
+        :ref:`sphx_glr_auto_examples_under-sampling_plot_illustration_nearmiss.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/under-sampling/plot_illustration_nearmiss
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The following example attends to make a qualitative comparison between the different under-samp...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/under-sampling/images/thumb/sphx_glr_plot_comparison_under_sampling_thumb.png
+
+        :ref:`sphx_glr_auto_examples_under-sampling_plot_comparison_under_sampling.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/under-sampling/plot_comparison_under_sampling
 .. raw:: html
 
     <div style='clear:both'></div>

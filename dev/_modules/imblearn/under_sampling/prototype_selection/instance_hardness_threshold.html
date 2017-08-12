@@ -93,10 +93,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../install.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">Support</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_guide.html">User Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Documentation</span></p>
 <ul>
@@ -110,10 +113,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../auto_examples/index.html#evaluation-examples">Evaluation examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../auto_examples/index.html#model-selection">Model Selection</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Addtional information</span></p>
+<p class="caption"><span class="caption-text">Addtional Information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../whats_new.html">Release history</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../todo.html">To Do list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../about.html">About us</a></li>
 </ul>
 
@@ -218,6 +220,8 @@
     <span class="sd">&quot;&quot;&quot;Class to perform under-sampling based on the instance hardness</span>
 <span class="sd">    threshold.</span>
 
+<span class="sd">    Read more in the :ref:`User Guide &lt;instance_hardness_threshold&gt;`.</span>
+
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    estimator : object, optional (default=RandomForestClassifier())</span>
@@ -251,6 +255,11 @@
 <span class="sd">          correspond to the targeted classes. The values correspond to the</span>
 <span class="sd">          desired number of samples.</span>
 
+<span class="sd">        .. warning::</span>
+<span class="sd">           This algorithm is a cleaning under-sampling method. When providing a</span>
+<span class="sd">           ``dict``, only the targeted classes will be used; the number of</span>
+<span class="sd">           samples will be discarded.</span>
+
 <span class="sd">    return_indices : bool, optional (default=False)</span>
 <span class="sd">        Whether or not to return the indices of the samples randomly</span>
 <span class="sd">        selected from the majority class.</span>
@@ -282,6 +291,15 @@
 <span class="sd">    Supports mutli-class resampling. A one-vs.-rest scheme is used when</span>
 <span class="sd">    sampling a class as proposed in [1]_.</span>
 
+<span class="sd">    See</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_under-sampling_plot_instance_hardness_threshold.py`.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] D. Smith, Michael R., Tony Martinez, and Christophe Giraud-Carrier.</span>
+<span class="sd">       &quot;An instance level analysis of data complexity.&quot; Machine learning</span>
+<span class="sd">       95.2 (2014): 225-256.</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 
@@ -297,12 +315,6 @@
 <span class="sd">    &gt;&gt;&gt; X_res, y_res = iht.fit_sample(X, y)</span>
 <span class="sd">    &gt;&gt;&gt; print(&#39;Resampled dataset shape {}&#39;.format(Counter(y_res)))</span>
 <span class="sd">    Resampled dataset shape Counter({1: 840, 0: 100})</span>
-
-<span class="sd">    References</span>
-<span class="sd">    ----------</span>
-<span class="sd">    .. [1] D. Smith, Michael R., Tony Martinez, and Christophe Giraud-Carrier.</span>
-<span class="sd">       &quot;An instance level analysis of data complexity.&quot; Machine learning</span>
-<span class="sd">       95.2 (2014): 225-256.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -489,6 +501,7 @@
       <script type="text/javascript" src="../../../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
 
   
 

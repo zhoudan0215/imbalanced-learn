@@ -93,10 +93,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../support.html">Support</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Documentation</span></p>
 <ul>
@@ -110,10 +113,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#evaluation-examples">Evaluation examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html#model-selection">Model Selection</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Addtional information</span></p>
+<p class="caption"><span class="caption-text">Addtional Information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../whats_new.html">Release history</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">To Do list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
 </ul>
 
@@ -305,6 +307,11 @@
 <span class="sd">        shape (n_unique_labels, )</span>
 <span class="sd">        The number of occurrences of each label in ``y_true``.</span>
 
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] `Wikipedia entry for the Sensitivity and specificity</span>
+<span class="sd">           &lt;https://en.wikipedia.org/wiki/Sensitivity_and_specificity&gt;`_</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; import numpy as np</span>
@@ -317,11 +324,6 @@
 <span class="sd">    (0.33333333333333331, 0.66666666666666663, None)</span>
 <span class="sd">    &gt;&gt;&gt; sensitivity_specificity_support(y_true, y_pred, average=&#39;weighted&#39;)</span>
 <span class="sd">    (0.33333333333333331, 0.66666666666666663, None)</span>
-
-<span class="sd">    References</span>
-<span class="sd">    ----------</span>
-<span class="sd">    .. [1] `Wikipedia entry for the Sensitivity and specificity</span>
-<span class="sd">           &lt;https://en.wikipedia.org/wiki/Sensitivity_and_specificity&gt;`_</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">average_options</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;micro&#39;</span><span class="p">,</span> <span class="s1">&#39;macro&#39;</span><span class="p">,</span> <span class="s1">&#39;weighted&#39;</span><span class="p">,</span> <span class="s1">&#39;samples&#39;</span><span class="p">)</span>
@@ -509,6 +511,11 @@
 <span class="sd">    sample_weight : ndarray, shape (n_samples, )</span>
 <span class="sd">        Sample weights.</span>
 
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    specificity : float (if ``average`` = None) or ndarray, \</span>
+<span class="sd">        shape (n_unique_labels, )</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; import numpy as np</span>
@@ -523,11 +530,6 @@
 <span class="sd">    0.33333333333333331</span>
 <span class="sd">    &gt;&gt;&gt; sensitivity_score(y_true, y_pred, average=None)</span>
 <span class="sd">    array([ 1.,  0.,  0.])</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    specificity : float (if ``average`` = None) or ndarray, \</span>
-<span class="sd">        shape (n_unique_labels, )</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">s</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">sensitivity_specificity_support</span><span class="p">(</span>
@@ -608,6 +610,11 @@
 <span class="sd">    sample_weight : ndarray, shape (n_samples, )</span>
 <span class="sd">        Sample weights.</span>
 
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    specificity : float (if ``average`` = None) or ndarray, \</span>
+<span class="sd">        shape (n_unique_labels, )</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; import numpy as np</span>
@@ -622,11 +629,6 @@
 <span class="sd">    0.66666666666666663</span>
 <span class="sd">    &gt;&gt;&gt; specificity_score(y_true, y_pred, average=None)</span>
 <span class="sd">    array([ 0.75,  0.5 ,  0.75])</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    specificity : float (if ``average`` = None) or ndarray, \</span>
-<span class="sd">        shape (n_unique_labels, )</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">_</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">sensitivity_specificity_support</span><span class="p">(</span>
@@ -722,6 +724,19 @@
 <span class="sd">    -------</span>
 <span class="sd">    geometric_mean : float</span>
 
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    See :ref:`sphx_glr_auto_examples_evaluation_plot_metrics.py`.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] Kubat, M. and Matwin, S. &quot;Addressing the curse of</span>
+<span class="sd">       imbalanced training sets: one-sided selection&quot; ICML (1997)</span>
+
+<span class="sd">    .. [2] Barandela, R., Sánchez, J. S., Garcıa, V., &amp; Rangel, E. &quot;Strategies</span>
+<span class="sd">       for learning in class imbalance problems&quot;, Pattern Recognition,</span>
+<span class="sd">       36(3), (2003), pp 849-851.</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; from imblearn.metrics import geometric_mean_score</span>
@@ -739,15 +754,6 @@
 <span class="sd">    0.47140452079103168</span>
 <span class="sd">    &gt;&gt;&gt; geometric_mean_score(y_true, y_pred, average=None)</span>
 <span class="sd">    array([ 0.8660254,  0.       ,  0.       ])</span>
-
-<span class="sd">    References</span>
-<span class="sd">    ----------</span>
-<span class="sd">    .. [1] Kubat, M. and Matwin, S. &quot;Addressing the curse of</span>
-<span class="sd">       imbalanced training sets: one-sided selection&quot; ICML (1997)</span>
-
-<span class="sd">    .. [2] Barandela, R., Sánchez, J. S., Garcıa, V., &amp; Rangel, E. &quot;Strategies</span>
-<span class="sd">       for learning in class imbalance problems&quot;, Pattern Recognition,</span>
-<span class="sd">       36(3), (2003), pp 849-851.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">average</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">average</span> <span class="o">!=</span> <span class="s1">&#39;multiclass&#39;</span><span class="p">:</span>
@@ -841,6 +847,10 @@
 <span class="sd">        Returns the scoring metric decorated which will automatically compute</span>
 <span class="sd">        the index balanced accuracy.</span>
 
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    See :ref:`sphx_glr_auto_examples_evaluation_plot_metrics.py`.</span>
+
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; from imblearn.metrics import geometric_mean_score as gmean</span>
@@ -850,6 +860,7 @@
 <span class="sd">    &gt;&gt;&gt; y_pred = [0, 0, 1, 1, 0, 1]</span>
 <span class="sd">    &gt;&gt;&gt; print(gmean(y_true, y_pred, average=None))</span>
 <span class="sd">    [ 0.44444444  0.44444444]</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">decorate</span><span class="p">(</span><span class="n">scoring_func</span><span class="p">):</span>
@@ -1106,6 +1117,7 @@
       <script type="text/javascript" src="../../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
 
   
 

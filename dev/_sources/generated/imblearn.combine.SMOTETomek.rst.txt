@@ -1,5 +1,5 @@
-imblearn\.combine\.SMOTETomek
-=============================
+:mod:`imblearn.combine`.SMOTETomek
+=========================================
 
 .. currentmodule:: imblearn.combine
 
@@ -7,10 +7,10 @@ imblearn\.combine\.SMOTETomek
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.combine.SMOTETomek.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

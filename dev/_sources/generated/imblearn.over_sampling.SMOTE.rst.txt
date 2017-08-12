@@ -1,5 +1,5 @@
-imblearn\.over\_sampling\.SMOTE
-===============================
+:mod:`imblearn.over_sampling`.SMOTE
+==========================================
 
 .. currentmodule:: imblearn.over_sampling
 
@@ -7,10 +7,10 @@ imblearn\.over\_sampling\.SMOTE
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.over_sampling.SMOTE.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

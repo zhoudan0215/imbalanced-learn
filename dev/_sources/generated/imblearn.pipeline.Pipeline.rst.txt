@@ -1,5 +1,5 @@
-imblearn\.pipeline\.Pipeline
-============================
+:mod:`imblearn.pipeline`.Pipeline
+========================================
 
 .. currentmodule:: imblearn.pipeline
 
@@ -7,10 +7,10 @@ imblearn\.pipeline\.Pipeline
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.pipeline.Pipeline.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

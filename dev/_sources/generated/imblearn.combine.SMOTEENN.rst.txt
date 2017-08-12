@@ -1,5 +1,5 @@
-imblearn\.combine\.SMOTEENN
-===========================
+:mod:`imblearn.combine`.SMOTEENN
+=======================================
 
 .. currentmodule:: imblearn.combine
 
@@ -7,10 +7,10 @@ imblearn\.combine\.SMOTEENN
 
    
    .. automethod:: __init__
-
-   
    
 
-   
-   
-   
+.. include:: imblearn.combine.SMOTEENN.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>
