@@ -128,7 +128,7 @@ by using an over-sampler.
 
     plt.show()
 
-**Total running time of the script:** ( 2 minutes  6.878 seconds)
+**Total running time of the script:** ( 2 minutes  5.970 seconds)
 
 
 

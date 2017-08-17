@@ -230,7 +230,7 @@ parameter <code class="docutils literal"><span class="pre">n_max_subset</span></
 <span class="gp">&gt;&gt;&gt; </span><span class="n">X_resampled</span><span class="p">,</span> <span class="n">y_resampled</span> <span class="o">=</span> <span class="n">bc</span><span class="o">.</span><span class="n">fit_sample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">X_resampled</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="go">(4, 192, 2)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">y_resampled</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">y_resampled</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># docstest: +SKIP</span>
 <span class="go">Counter({2: 64, 1: 64, 0: 64})</span>
 </pre></div>
 </div>
