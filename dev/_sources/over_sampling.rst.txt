@@ -29,7 +29,7 @@ randomly sampling with replacement the current available samples. The
    >>> ros = RandomOverSampler(random_state=0)
    >>> X_resampled, y_resampled = ros.fit_sample(X, y)
    >>> from collections import Counter
-   >>> print(Counter(y_resampled))
+   >>> print(Counter(y_resampled)) # doctest: +SKIP
    Counter({2: 4674, 1: 4674, 0: 4674})
 
 The augmented data set should be used instead of the original data set to train
