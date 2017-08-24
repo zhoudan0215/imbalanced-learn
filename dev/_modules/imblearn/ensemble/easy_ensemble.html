@@ -292,15 +292,16 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        X : ndarray, shape (n_samples, n_features)</span>
+<span class="sd">        X : {array-like, sparse matrix}, shape (n_samples, n_features)</span>
 <span class="sd">            Matrix containing the data which have to be sampled.</span>
 
-<span class="sd">        y : ndarray, shape (n_samples, )</span>
+<span class="sd">        y : array-like, shape (n_samples,)</span>
 <span class="sd">            Corresponding label for each sample in X.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        X_resampled : ndarray, shape (n_subset, n_samples_new, n_features)</span>
+<span class="sd">        X_resampled : {ndarray, sparse matrix}, shape \</span>
+<span class="sd">(n_subset, n_samples_new, n_features)</span>
 <span class="sd">            The array containing the resampled data.</span>
 
 <span class="sd">        y_resampled : ndarray, shape (n_subset, n_samples_new)</span>

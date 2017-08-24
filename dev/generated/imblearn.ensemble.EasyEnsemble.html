@@ -202,7 +202,7 @@
 <h1><a class="reference internal" href="../api.html#module-imblearn.ensemble" title="imblearn.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">imblearn.ensemble</span></code></a>.EasyEnsemble<a class="headerlink" href="#imblearn-ensemble-easyensemble" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="imblearn.ensemble.EasyEnsemble">
-<em class="property">class </em><code class="descclassname">imblearn.ensemble.</code><code class="descname">EasyEnsemble</code><span class="sig-paren">(</span><em>ratio='auto'</em>, <em>return_indices=False</em>, <em>random_state=None</em>, <em>replacement=False</em>, <em>n_subsets=10</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/ensemble/easy_ensemble.html#EasyEnsemble"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/488a0e8/imblearn/ensemble/easy_ensemble.py#L17"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">imblearn.ensemble.</code><code class="descname">EasyEnsemble</code><span class="sig-paren">(</span><em>ratio='auto'</em>, <em>return_indices=False</em>, <em>random_state=None</em>, <em>replacement=False</em>, <em>n_subsets=10</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/ensemble/easy_ensemble.html#EasyEnsemble"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/cddf39b/imblearn/ensemble/easy_ensemble.py#L17"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an ensemble sets by iteratively applying random under-sampling.</p>
 <p>This method iteratively select a random subset and make an ensemble of the
 different sets.</p>
@@ -289,22 +289,22 @@ April 2009.</td></tr>
 </div>
 <dl class="method">
 <dt id="imblearn.ensemble.EasyEnsemble.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>ratio='auto'</em>, <em>return_indices=False</em>, <em>random_state=None</em>, <em>replacement=False</em>, <em>n_subsets=10</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/ensemble/easy_ensemble.html#EasyEnsemble.__init__"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/488a0e8/imblearn/ensemble/easy_ensemble.py#L98"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ratio='auto'</em>, <em>return_indices=False</em>, <em>random_state=None</em>, <em>replacement=False</em>, <em>n_subsets=10</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imblearn/ensemble/easy_ensemble.html#EasyEnsemble.__init__"><span class="viewcode-link">[source]</span></a><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/cddf39b/imblearn/ensemble/easy_ensemble.py#L98"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="imblearn.ensemble.EasyEnsemble.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/488a0e8/imblearn/base.py#L136"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/cddf39b/imblearn/base.py#L140"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find the classes statistics before to perform sampling.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : ndarray, shape (n_samples, n_features)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : {array-like, sparse matrix}, shape (n_samples, n_features)</p>
 <blockquote>
 <div><p>Matrix containing the data which have to be sampled.</p>
 </div></blockquote>
-<p><strong>y</strong> : ndarray, shape (n_samples, )</p>
+<p><strong>y</strong> : array-like, shape (n_samples,)</p>
 <blockquote>
 <div><p>Corresponding label for each sample in X.</p>
 </div></blockquote>
@@ -322,27 +322,27 @@ April 2009.</td></tr>
 
 <dl class="method">
 <dt id="imblearn.ensemble.EasyEnsemble.fit_sample">
-<code class="descname">fit_sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/488a0e8/imblearn/base.py#L65"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.fit_sample" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit_sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/cddf39b/imblearn/base.py#L66"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.fit_sample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit the statistics and resample the data directly.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : ndarray, shape (n_samples, n_features)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : {array-like, sparse matrix}, shape (n_samples, n_features)</p>
 <blockquote>
 <div><p>Matrix containing the data which have to be sampled.</p>
 </div></blockquote>
-<p><strong>y</strong> : ndarray, shape (n_samples, )</p>
+<p><strong>y</strong> : array-like, shape (n_samples,)</p>
 <blockquote>
 <div><p>Corresponding label for each sample in X.</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>X_resampled</strong> : ndarray, shape (n_samples_new, n_features)</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>X_resampled</strong> : {array-like, sparse matrix}, shape (n_samples_new, n_features)</p>
 <blockquote>
 <div><p>The array containing the resampled data.</p>
 </div></blockquote>
-<p><strong>y_resampled</strong> : ndarray, shape (n_samples_new)</p>
+<p><strong>y_resampled</strong> : array-like, shape (n_samples_new,)</p>
 <blockquote class="last">
 <div><p>The corresponding label of <cite>X_resampled</cite></p>
 </div></blockquote>
@@ -354,7 +354,7 @@ April 2009.</td></tr>
 
 <dl class="method">
 <dt id="imblearn.ensemble.EasyEnsemble.get_params">
-<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/488a0e8/imblearn/../../miniconda/envs/testenv/lib/python3.6/site-packages/sklearn/base.py#L212"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/cddf39b/imblearn/../../miniconda/envs/testenv/lib/python3.6/site-packages/sklearn/base.py#L212"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -379,23 +379,23 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="imblearn.ensemble.EasyEnsemble.sample">
-<code class="descname">sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/488a0e8/imblearn/base.py#L36"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.sample" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sample</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/cddf39b/imblearn/base.py#L36"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.sample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resample the dataset.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : ndarray, shape (n_samples, n_features)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : {array-like, sparse matrix}, shape (n_samples, n_features)</p>
 <blockquote>
 <div><p>Matrix containing the data which have to be sampled.</p>
 </div></blockquote>
-<p><strong>y</strong> : ndarray, shape (n_samples, )</p>
+<p><strong>y</strong> : array-like, shape (n_samples,)</p>
 <blockquote>
 <div><p>Corresponding label for each sample in X.</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>X_resampled</strong> : ndarray, shape (n_samples_new, n_features)</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>X_resampled</strong> : {ndarray, sparse matrix}, shape (n_samples_new, n_features)</p>
 <blockquote>
 <div><p>The array containing the resampled data.</p>
 </div></blockquote>
@@ -411,7 +411,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="imblearn.ensemble.EasyEnsemble.set_params">
-<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/488a0e8/imblearn/../../miniconda/envs/testenv/lib/python3.6/site-packages/sklearn/base.py#L249"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/cddf39b/imblearn/../../miniconda/envs/testenv/lib/python3.6/site-packages/sklearn/base.py#L249"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.ensemble.EasyEnsemble.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The latter have parameters of the form

@@ -189,6 +189,7 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">NearestNeighbors</span>
+<span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="k">import</span> <span class="n">safe_indexing</span>
 
 <span class="kn">from</span> <span class="nn">..base</span> <span class="k">import</span> <span class="n">BaseCleaningSampler</span>
 
@@ -323,18 +324,19 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        X : ndarray, shape (n_samples, n_features)</span>
+<span class="sd">        X : {array-like, sparse matrix}, shape (n_samples, n_features)</span>
 <span class="sd">            Matrix containing the data which have to be sampled.</span>
 
-<span class="sd">        y : ndarray, shape (n_samples, )</span>
+<span class="sd">        y : array-like, shape (n_samples,)</span>
 <span class="sd">            Corresponding label for each sample in X.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        X_resampled : ndarray, shape (n_samples_new, n_features)</span>
+<span class="sd">        X_resampled : {ndarray, sparse matrix}, shape \</span>
+<span class="sd">(n_samples_new, n_features)</span>
 <span class="sd">            The array containing the resampled data.</span>
 
-<span class="sd">        y_resampled : ndarray, shape (n_samples_new)</span>
+<span class="sd">        y_resampled : ndarray, shape (n_samples_new,)</span>
 <span class="sd">            The corresponding label of `X_resampled`</span>
 
 <span class="sd">        idx_under : ndarray, shape (n_samples, )</span>
@@ -349,12 +351,15 @@
         <span class="n">nns</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">return_distance</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
 
         <span class="n">links</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_tomek</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">nns</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ratio_</span><span class="p">)</span>
+        <span class="n">idx_under</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">links</span><span class="p">))</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_indices</span><span class="p">:</span>
-            <span class="k">return</span> <span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">links</span><span class="p">)],</span> <span class="n">y</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">links</span><span class="p">)],</span>
-                    <span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">links</span><span class="p">)))</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">safe_indexing</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">idx_under</span><span class="p">),</span>
+                    <span class="n">safe_indexing</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">idx_under</span><span class="p">),</span>
+                    <span class="n">idx_under</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">X</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">links</span><span class="p">)],</span> <span class="n">y</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">links</span><span class="p">)]</span></div>
+            <span class="k">return</span> <span class="p">(</span><span class="n">safe_indexing</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">idx_under</span><span class="p">),</span>
+                    <span class="n">safe_indexing</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">idx_under</span><span class="p">))</span></div>
 </pre></div>
 
            </div>

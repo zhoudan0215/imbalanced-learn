@@ -218,15 +218,16 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        X : ndarray, shape (n_samples, n_features)</span>
+<span class="sd">        X : {array-like, sparse matrix}, shape (n_samples, n_features)</span>
 <span class="sd">            Matrix containing the data which have to be sampled.</span>
 
-<span class="sd">        y : ndarray, shape (n_samples, )</span>
+<span class="sd">        y : array-like, shape (n_samples,)</span>
 <span class="sd">            Corresponding label for each sample in X.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        X_resampled : ndarray, shape (n_samples_new, n_features)</span>
+<span class="sd">        X_resampled : {ndarray, sparse matrix}, shape \</span>
+<span class="sd">(n_samples_new, n_features)</span>
 <span class="sd">            The array containing the resampled data.</span>
 
 <span class="sd">        y_resampled : ndarray, shape (n_samples_new)</span>
@@ -235,7 +236,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="c1"># Check the consistency of X and y</span>
-        <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">accept_sparse</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;csr&#39;</span><span class="p">,</span> <span class="s1">&#39;csc&#39;</span><span class="p">])</span>
 
         <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;ratio_&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -247,18 +248,19 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        X : ndarray, shape (n_samples, n_features)</span>
+<span class="sd">        X : {array-like, sparse matrix}, shape (n_samples, n_features)</span>
 <span class="sd">            Matrix containing the data which have to be sampled.</span>
 
-<span class="sd">        y : ndarray, shape (n_samples, )</span>
+<span class="sd">        y : array-like, shape (n_samples,)</span>
 <span class="sd">            Corresponding label for each sample in X.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        X_resampled : ndarray, shape (n_samples_new, n_features)</span>
+<span class="sd">        X_resampled : {array-like, sparse matrix}, shape \</span>
+<span class="sd">(n_samples_new, n_features)</span>
 <span class="sd">            The array containing the resampled data.</span>
 
-<span class="sd">        y_resampled : ndarray, shape (n_samples_new)</span>
+<span class="sd">        y_resampled : array-like, shape (n_samples_new,)</span>
 <span class="sd">            The corresponding label of `X_resampled`</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -271,19 +273,21 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        X : ndarray, shape (n_samples, n_features)</span>
+<span class="sd">        X : {array-like, sparse matrix}, shape (n_samples, n_features)</span>
 <span class="sd">            Matrix containing the data which have to be sampled.</span>
 
-<span class="sd">        y : ndarray, shape (n_samples, )</span>
+<span class="sd">        y : array-like, shape (n_samples,)</span>
 <span class="sd">            Corresponding label for each sample in X.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        X_resampled : ndarray, shape (n_samples_new, n_features)</span>
+<span class="sd">        X_resampled : {ndarray, sparse matrix}, shape \</span>
+<span class="sd">(n_samples_new, n_features)</span>
 <span class="sd">            The array containing the resampled data.</span>
 
-<span class="sd">        y_resampled : ndarray, shape (n_samples_new)</span>
+<span class="sd">        y_resampled : ndarray, shape (n_samples_new,)</span>
 <span class="sd">            The corresponding label of `X_resampled`</span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
@@ -318,10 +322,10 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        X : ndarray, shape (n_samples, n_features)</span>
+<span class="sd">        X : {array-like, sparse matrix}, shape (n_samples, n_features)</span>
 <span class="sd">            Matrix containing the data which have to be sampled.</span>
 
-<span class="sd">        y : ndarray, shape (n_samples, )</span>
+<span class="sd">        y : array-like, shape (n_samples,)</span>
 <span class="sd">            Corresponding label for each sample in X.</span>
 
 <span class="sd">        Returns</span>
@@ -330,7 +334,7 @@
 <span class="sd">            Return self.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">accept_sparse</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;csr&#39;</span><span class="p">,</span> <span class="s1">&#39;csc&#39;</span><span class="p">])</span>
         <span class="n">y</span> <span class="o">=</span> <span class="n">check_target_type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">X_hash_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_hash_</span> <span class="o">=</span> <span class="n">hash_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
         <span class="c1"># self.sampling_type is already checked in check_ratio</span>
