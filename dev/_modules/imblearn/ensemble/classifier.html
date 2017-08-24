@@ -316,7 +316,7 @@
 <span class="sd">    estimators_features_ : list of arrays</span>
 <span class="sd">        The subset of drawn features for each base estimator.</span>
 
-<span class="sd">    classes_ : array of shape = [n_classes]</span>
+<span class="sd">    classes_ : array, shape (n_classes,)</span>
 <span class="sd">        The classes labels.</span>
 
 <span class="sd">    n_classes_ : int or list</span>
@@ -325,7 +325,7 @@
 <span class="sd">    oob_score_ : float</span>
 <span class="sd">        Score of the training dataset obtained using an out-of-bag estimate.</span>
 
-<span class="sd">    oob_decision_function_ : array of shape = [n_samples, n_classes]</span>
+<span class="sd">    oob_decision_function_ : ndarray, shape (n_samples, n_classes)</span>
 <span class="sd">        Decision function computed with out-of-bag estimate on the training</span>
 <span class="sd">        set. If n_estimators is small it might be possible that a data point</span>
 <span class="sd">        was never left out during the bootstrap. In this case,</span>
