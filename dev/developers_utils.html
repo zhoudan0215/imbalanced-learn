@@ -111,6 +111,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">7. Utilities for Developers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#validation-tools">7.1. Validation Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#deprecation">7.2. Deprecation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-utilities">7.3. Testing utilities</a></li>
 </ul>
 </li>
 </ul>
@@ -287,6 +288,49 @@ same information as the deprecation warning as explained above. Use the
 <p>On the top of all the functionality provided by scikit-learn. Imbalance-learn
 provides <code class="xref py py-func docutils literal"><span class="pre">deprecate_parameter</span></code>: which is used to deprecate a sampler’s
 parameter (attribute) by another one.</p>
+</div>
+<div class="section" id="testing-utilities">
+<h2>7.3. Testing utilities<a class="headerlink" href="#testing-utilities" title="Permalink to this headline">¶</a></h2>
+<p>Currently, imbalanced-learn provide a warning management utility. This feature
+is going to be merge in pytest and will be removed when the pytest release will
+have it.</p>
+<p>If using Python 2.7 or above, you may use this function as a
+context manager:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.utils.testing</span> <span class="k">import</span> <span class="n">warns</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">warns</span><span class="p">(</span><span class="ne">RuntimeWarning</span><span class="p">):</span>
+<span class="gp">... </span>   <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;my runtime warning&quot;</span><span class="p">,</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">warns</span><span class="p">(</span><span class="ne">RuntimeWarning</span><span class="p">):</span>
+<span class="gp">... </span>   <span class="k">pass</span>
+<span class="gt">Traceback (most recent call last):</span>
+  <span class="c">...</span>
+<span class="gr">Failed</span>: <span class="n">DID NOT WARN. No warnings of type ...RuntimeWarning... was emitted...</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">warns</span><span class="p">(</span><span class="ne">RuntimeWarning</span><span class="p">):</span>
+<span class="gp">... </span>   <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  <span class="c">...</span>
+<span class="gr">Failed</span>: <span class="n">DID NOT WARN. No warnings of type ...RuntimeWarning... was emitted...</span>
+</pre></div>
+</div>
+<p>In the context manager form you may use the keyword argument <code class="docutils literal"><span class="pre">match</span></code> to assert
+that the exception matches a text or regex:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.utils.testing</span> <span class="k">import</span> <span class="n">warns</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">warns</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">&#39;must be 0 or None&#39;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;value must be 0 or None&quot;</span><span class="p">,</span> <span class="ne">UserWarning</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">warns</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;must be \d+$&#39;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;value must be 42&quot;</span><span class="p">,</span> <span class="ne">UserWarning</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">warns</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;must be \d+$&#39;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;this is not here&quot;</span><span class="p">,</span> <span class="ne">UserWarning</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  <span class="c">...</span>
+<span class="gr">AssertionError</span>: <span class="n">&#39;must be \d+$&#39; pattern not found in [&#39;this is not here&#39;]</span>
+</pre></div>
+</div>
 </div>
 </div>
 
