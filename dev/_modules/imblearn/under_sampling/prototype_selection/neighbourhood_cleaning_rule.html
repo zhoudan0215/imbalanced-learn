@@ -246,6 +246,15 @@
 <span class="sd">        :class:`sklearn.neighbors.base.KNeighborsMixin` that will be used to</span>
 <span class="sd">        find the nearest-neighbors.</span>
 
+<span class="sd">    threshold_cleaning : float, optional (default=0.5)</span>
+<span class="sd">        Threshold used to whether consider a class or not during the cleaning</span>
+<span class="sd">        after applying ENN. A class will be considered during cleaning when:</span>
+
+<span class="sd">        Ci &gt; C x T ,</span>
+
+<span class="sd">        where Ci and C is the number of samples in the class and the data set,</span>
+<span class="sd">        respectively and theta is the threshold.</span>
+
 <span class="sd">    n_jobs : int, optional (default=1)</span>
 <span class="sd">        The number of threads to open if possible.</span>
 
